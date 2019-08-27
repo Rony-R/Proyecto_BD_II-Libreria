@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BBA3ED77-1106-5F2F-C15A-3255F202E078" name="TBL_DESCUENTOS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:59:57 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_35</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DESCUENTO" id="E2A8FA02-3DB7-A12A-32FD-4AC5EF3E92D7">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:00:43 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PORCENTAJE_DESCUENTO" id="E823A84F-B0CE-63A6-023D-1D8E0EBE1E1F">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:00:43 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION" id="0E2346B8-C8AE-5CB8-2BF1-B97F1D864C55">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:00:59 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F0A4D491-0415-F52C-E9E5-F161182B82EC" name="TBL_DESCUENTOS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:00:43 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2A8FA02-3DB7-A12A-32FD-4AC5EF3E92D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

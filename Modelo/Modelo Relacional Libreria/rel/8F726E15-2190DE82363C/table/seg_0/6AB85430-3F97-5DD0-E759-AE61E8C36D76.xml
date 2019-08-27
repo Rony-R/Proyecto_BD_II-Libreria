@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6AB85430-3F97-5DD0-E759-AE61E8C36D76" name="TBL_GENEROS_X_LIBRO">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:38:19 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_LIBRO" id="0B144664-4604-A4F1-10B8-EA572D46F77B">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:38:32 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5179C62-81C0-9145-A5C4-BFDC2A8296D7" referredColumn="C23D038B-92B8-1AE7-2376-1A5C7C47C60A"/>
+</associations>
+</Column>
+<Column name="ID_GENERO" id="AC7AEEC9-EC68-A559-894C-60DD19438D3A">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:38:47 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23CCCD60-7797-D2B1-6275-7C267B48453E" referredColumn="93C8DA2C-4B47-19B5-EBB4-6D035CB0ECA4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24EAFF94-564F-A2CC-1FBD-BF45DE4C4812" name="TBL_GENEROS_X_LIBRO_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:39:14 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B144664-4604-A4F1-10B8-EA572D46F77B"/>
+<colUsage columnID="AC7AEEC9-EC68-A559-894C-60DD19438D3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C3F6A05-4624-878B-BF4F-4CEB8C340C3B" name="GEN_X_LIB_LIB_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:38:32 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B144664-4604-A4F1-10B8-EA572D46F77B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51903360-EDD4-FC25-E4C7-CDC530343F55" name="GEN_X_LIB_GEN_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:38:47 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC7AEEC9-EC68-A559-894C-60DD19438D3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9F049579-6705-E836-6567-BEF54BA501FE" containerWithKeyObject="6C723313-9AB3-C02E-E0FC-5BE90BC12F39" localFKIndex="2A61575B-F230-8E07-6BFA-3685A0DF5D4E" name="CAR_X_EMP_CAR_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:06:43 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_CARGOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5D26E6D7-31F6-52CC-BBF3-B0B64CC25FFC</referredTableID>
+<keyObject>36C5D5AE-6D3C-8CE4-2992-C411C29D4D90</keyObject>
+<referredKeyID>36C5D5AE-6D3C-8CE4-2992-C411C29D4D90</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CARGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

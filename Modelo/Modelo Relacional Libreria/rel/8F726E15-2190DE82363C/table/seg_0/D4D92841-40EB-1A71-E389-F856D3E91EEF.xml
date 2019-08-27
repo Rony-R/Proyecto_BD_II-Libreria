@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4D92841-40EB-1A71-E389-F856D3E91EEF" name="TBL_CLIENTES">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:48:54 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLIENTE" id="4BBBB20B-0053-F9F6-774C-38A6A92BFDA4">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:49:10 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INGRESO" id="D9C449A5-9F7C-E560-111F-1A21CBE29B29">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:49:24 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0751870-68D4-BBD6-16F5-F540AEEBE7F4" name="TBL_CLIENTES_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:49:10 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BBBB20B-0053-F9F6-774C-38A6A92BFDA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

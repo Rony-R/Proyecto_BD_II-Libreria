@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5418981D-129E-FBE4-B6E0-5931A908F1F8" name="TBL_IDIOMAS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:35:54 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_21</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_IDIOMA" id="C4A755B3-4D62-F17C-286E-55F83DEC9672">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:22 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_IDIOMA" id="A38F84F3-E095-9045-8D36-B5D605A9772B">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:22 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="56C0DB67-51C1-7270-9FA6-496DAD1E1EC1" name="TBL_IDIOMAS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:22 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4A755B3-4D62-F17C-286E-55F83DEC9672"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

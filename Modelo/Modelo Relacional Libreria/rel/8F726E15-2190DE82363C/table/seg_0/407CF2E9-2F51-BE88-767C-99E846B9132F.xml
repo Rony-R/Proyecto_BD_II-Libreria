@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="407CF2E9-2F51-BE88-767C-99E846B9132F" name="TBL_TIPO_PROVEEDOR">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:24:50 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_PROVEEDOR" id="0F936210-0B17-4A68-8FDE-C0B872F2FADD">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:25:16 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_TIPO_PROV" id="8C440737-1995-353B-CA18-87E77AC0EBD7">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:25:28 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B73F0EEC-B4ED-5C42-36DE-5FB280D097E2" name="TBL_TIPO_PROVEEDOR_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:25:16 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F936210-0B17-4A68-8FDE-C0B872F2FADD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

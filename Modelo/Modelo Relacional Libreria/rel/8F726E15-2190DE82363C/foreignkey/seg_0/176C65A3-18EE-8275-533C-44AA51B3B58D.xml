@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="176C65A3-18EE-8275-533C-44AA51B3B58D" containerWithKeyObject="CAF2D6D0-21E5-BD1E-069B-629852ECB708" localFKIndex="A6E26423-D6C8-9C40-FC1E-DD1072B63D3A" name="EST_PAS_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:20:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_PASILLOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F39B69AF-ECF9-24B8-E620-F9CB1C8B30DC</referredTableID>
+<keyObject>25B8CC7F-315E-DDCA-DD41-A95667066E8D</keyObject>
+<referredKeyID>25B8CC7F-315E-DDCA-DD41-A95667066E8D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PASILLO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2CB84285-BE06-3236-57D3-28183A48E721" name="TBL_CATEGORIAS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:39:35 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CATEGORIA" id="2120B241-95A6-20A8-4676-198C6AD707E7">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:39:50 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION" id="390EB8E0-4881-106C-9540-F889AAE6A415">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:40:05 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B1E1D816-7BEE-E8F5-8CCB-1B5BC5D88518" name="TBL_CATEGORIAS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:39:50 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2120B241-95A6-20A8-4676-198C6AD707E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

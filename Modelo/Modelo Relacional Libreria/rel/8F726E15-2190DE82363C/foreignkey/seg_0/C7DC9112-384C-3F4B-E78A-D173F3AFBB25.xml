@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7DC9112-384C-3F4B-E78A-D173F3AFBB25" containerWithKeyObject="3FE9115C-746A-4A26-DA38-02B1E50AD219" localFKIndex="505DF890-C232-05A8-C982-4794547FF055" name="LIB_IDI_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:37:40 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_IDIOMAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5418981D-129E-FBE4-B6E0-5931A908F1F8</referredTableID>
+<keyObject>56C0DB67-51C1-7270-9FA6-496DAD1E1EC1</keyObject>
+<referredKeyID>56C0DB67-51C1-7270-9FA6-496DAD1E1EC1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_IDIOMA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

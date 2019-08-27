@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="89DCF68C-6243-9A9D-4DDD-3E65BEA9BCD4" name="TBL_CUBICULOS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:21:27 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CUBICULO" id="47141638-EE68-12CC-6731-F8472A7D18FD">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:21:42 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTANTE" id="B30E6659-492B-8024-A2FD-500606C8D44C">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:22:09 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EF0FF993-C0AA-4738-C79C-6417517B27E0" referredColumn="31DB6826-C117-B667-FDE5-1FE6520AEA5A"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_CUBICULO" id="1F06E61B-5A53-56F5-D720-ED7E971B24CF">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:22:00 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C4A8E328-CFD8-1BD7-B543-54F1ECE13458" name="TBL_CUBICULOS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:21:42 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47141638-EE68-12CC-6731-F8472A7D18FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="140AE82A-F06F-39FD-57F5-5B7469FC6EA8" name="CUB_EST_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:22:09 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B30E6659-492B-8024-A2FD-500606C8D44C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

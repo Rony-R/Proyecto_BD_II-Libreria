@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC48C1FD-02BD-80B7-0A62-62936BA8059B" name="TBL_PAGOS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:56:09 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_33</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PAGO" id="688EC5E3-F1D2-8097-25B7-AEEF3002385E">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:56:24 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_PAGO" id="729073C5-241D-0244-8427-B88448B67034">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:59:04 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0848AC76-B99C-9D84-1C06-AED3721C95E6" referredColumn="E9A0AAAB-6D19-4445-53D4-598097D87E16"/>
+</associations>
+</Column>
+<Column name="ID_DESCUENTO" id="BDF084AE-C638-8E6B-62D5-34596DFF69D8">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:01:10 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68836653-DDB9-846E-2D9F-C2E90CCF599D" referredColumn="E2A8FA02-3DB7-A12A-32FD-4AC5EF3E92D7"/>
+</associations>
+</Column>
+<Column name="ID_PRESTAMO" id="2B8DB0FC-EC67-EE32-7B9A-D25379D6758D">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:05:36 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5CD3DD76-517B-1EC3-80C1-08A1908BF3FC" referredColumn="504ACD19-1D66-F07B-DC45-695FC54C1071"/>
+</associations>
+</Column>
+<Column name="MONTO_PAGAR" id="21A059F6-FEB3-C24D-9B31-EEB1C75C0D6D">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:56:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_PAGO" id="30F800AA-A12E-02F6-8D19-F386EBAB0C28">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:56:58 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9AF2D8B1-2878-2D91-AFEE-2B8A82EB98FF" name="TBL_PAGOS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:56:24 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="688EC5E3-F1D2-8097-25B7-AEEF3002385E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9765F70A-292E-1446-3309-904006BDC846" name="PAG_TIPO_PAGO_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:59:04 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="729073C5-241D-0244-8427-B88448B67034"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E912A01C-68A6-56B3-124B-55377888A9AA" name="PAG_DESC_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:01:10 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDF084AE-C638-8E6B-62D5-34596DFF69D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8C27D22-C35B-E43B-0FDC-0E2896134ACD" name="PAGOS_PRES_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:05:36 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B8DB0FC-EC67-EE32-7B9A-D25379D6758D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

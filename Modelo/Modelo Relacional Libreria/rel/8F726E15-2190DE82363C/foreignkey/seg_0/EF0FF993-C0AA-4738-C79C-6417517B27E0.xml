@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EF0FF993-C0AA-4738-C79C-6417517B27E0" containerWithKeyObject="89DCF68C-6243-9A9D-4DDD-3E65BEA9BCD4" localFKIndex="140AE82A-F06F-39FD-57F5-5B7469FC6EA8" name="CUB_EST_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:22:09 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_ESTANTES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CAF2D6D0-21E5-BD1E-069B-629852ECB708</referredTableID>
+<keyObject>8AC6A432-88CF-1E7F-56F0-CB51F8F71F9D</keyObject>
+<referredKeyID>8AC6A432-88CF-1E7F-56F0-CB51F8F71F9D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ESTANTE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06F2DBCA-5D85-A043-D943-813D36483D20" name="TBL_AUTORES">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:31:14 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_AUTOR" id="56186DDF-133E-2315-2A45-9B4DAA886683">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:31:38 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PERSONA" id="24E3B61D-AE63-4EBC-40A7-3D6C66213F49">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:31:46 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31D10AE6-9390-6334-8ACD-20E3A743E433" referredColumn="C2A28FE6-9246-E814-1B80-D1EC5A7EC672"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88FD8A55-9BB3-7366-E4F3-809FF1857C42" name="TBL_AUTORES_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:31:38 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56186DDF-133E-2315-2A45-9B4DAA886683"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1A87F7F-4E5C-8424-0752-40CCE0EC65DE" name="AUT_PER_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:31:46 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24E3B61D-AE63-4EBC-40A7-3D6C66213F49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

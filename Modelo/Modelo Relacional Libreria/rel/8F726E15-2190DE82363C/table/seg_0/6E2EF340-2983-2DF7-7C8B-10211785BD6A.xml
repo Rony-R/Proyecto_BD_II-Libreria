@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6E2EF340-2983-2DF7-7C8B-10211785BD6A" name="TBL_DETALLE_FACTURAS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:52:50 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_31</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DETA_FACTURA" id="251C2440-179E-F384-2E0E-5FD288D35BD5">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:53:15 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_LIBRO" id="01238A9D-187C-C6E4-BAB9-5C61E4CEC645">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:54:13 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="783B9153-715C-505B-C139-EA08B1872B96" referredColumn="C23D038B-92B8-1AE7-2376-1A5C7C47C60A"/>
+</associations>
+</Column>
+<Column name="ID_FACTURA" id="52478487-A208-9D7B-524D-EDB71864F413">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:55:25 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1990FCE3-7AD6-1F2E-7765-1F26451E9A07" referredColumn="9F22AEF4-24D0-ED89-C998-64E5D780CB8C"/>
+</associations>
+</Column>
+<Column name="CANTIDAD" id="D2653304-DC19-B315-4C06-94FE0CDBA3B5">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:53:27 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60C2C802-121D-26D0-2E3F-69D5928F96D9" name="TBL_DETALLE_FACTURAS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:53:15 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="251C2440-179E-F384-2E0E-5FD288D35BD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94EE84A9-0CE1-AA99-154E-5994126D2751" name="DET_FAC_LIB_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:54:13 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01238A9D-187C-C6E4-BAB9-5C61E4CEC645"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5C24D3D-4118-DA88-4866-63C65389D2D6" name="DET_FAC_FAC_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:55:25 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52478487-A208-9D7B-524D-EDB71864F413"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

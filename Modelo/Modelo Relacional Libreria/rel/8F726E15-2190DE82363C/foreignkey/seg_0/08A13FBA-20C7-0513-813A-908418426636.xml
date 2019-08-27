@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="08A13FBA-20C7-0513-813A-908418426636" containerWithKeyObject="809B14C0-85F0-0091-5D6C-484E82140034" localFKIndex="357E1667-770A-BFBD-2A3E-030110E1AA47" name="FAC_PAG_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:57:31 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_PAGOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AC48C1FD-02BD-80B7-0A62-62936BA8059B</referredTableID>
+<keyObject>9AF2D8B1-2878-2D91-AFEE-2B8A82EB98FF</keyObject>
+<referredKeyID>9AF2D8B1-2878-2D91-AFEE-2B8A82EB98FF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PAGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

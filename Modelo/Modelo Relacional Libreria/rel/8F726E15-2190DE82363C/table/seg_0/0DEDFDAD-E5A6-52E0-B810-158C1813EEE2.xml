@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0DEDFDAD-E5A6-52E0-B810-158C1813EEE2" name="TBL_JEFES">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:56:12 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_JEFE" id="A789CF49-2682-A27E-9601-ECC8B4BC95C8">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:56:46 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_EMPLEADO" id="346B84AE-007A-E343-DFC3-622BF0B8F354">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:58:57 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2BBD2E92-8426-CBF5-B365-681C50999590" referredColumn="FE7B272E-B5FC-3E22-D352-CA0D68E05BC7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F1470F3-187D-7766-483F-A88DD4DC05E7" name="TBL_JEFE_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:56:46 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A789CF49-2682-A27E-9601-ECC8B4BC95C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9243D730-6C98-A6E3-195E-F6689CDBDD5D" name="TBL_JEFES__UN">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:00:06 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="346B84AE-007A-E343-DFC3-622BF0B8F354"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF4E4C2F-C043-6AD4-8D06-9159FCFDD993" name="JEF_EMP_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:58:57 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="346B84AE-007A-E343-DFC3-622BF0B8F354"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

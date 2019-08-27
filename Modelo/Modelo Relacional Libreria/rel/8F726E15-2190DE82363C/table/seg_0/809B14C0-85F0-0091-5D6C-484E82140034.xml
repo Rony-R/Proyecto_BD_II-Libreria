@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="809B14C0-85F0-0091-5D6C-484E82140034" name="TBL_FACTURAS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:49:48 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_29</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FACTURA" id="9F22AEF4-24D0-ED89-C998-64E5D780CB8C">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:50:06 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="6C98B54D-1A02-D5DF-B44E-C1DCD29FDCD6">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:50:58 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4B1E9B7-29DD-4FF8-EC92-1CA547111AE9" referredColumn="4BBBB20B-0053-F9F6-774C-38A6A92BFDA4"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_OBTENCION" id="0095361F-CEEA-3701-A0DD-8B32BBCBFC8F">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:52:20 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CB92A0F-C85E-3D30-2E19-72AC0C5B9C2A" referredColumn="430D34D5-4D46-702A-A9F0-94D6DD925001"/>
+</associations>
+</Column>
+<Column name="ID_PAGO" id="EB4C8835-93BB-2E2E-D6B9-E83D184D5CDD">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:57:31 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08A13FBA-20C7-0513-813A-908418426636" referredColumn="688EC5E3-F1D2-8097-25B7-AEEF3002385E"/>
+</associations>
+</Column>
+<Column name="FECHA_FACTURA" id="5E7A5838-342C-1144-EA7F-4308533B5E00">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:50:31 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31EB7B5A-9D0E-F83F-003C-0C0FEFF02B79" name="TBL_FACTURAS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:50:06 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F22AEF4-24D0-ED89-C998-64E5D780CB8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C784557-7DF4-FC85-BFF8-620DF02C087D" name="TBL_FACTURAS__UN">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:57:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB4C8835-93BB-2E2E-D6B9-E83D184D5CDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E7B09A5-CF57-04F2-14C2-E978E8909EBF" name="FAC_CLI_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:50:58 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C98B54D-1A02-D5DF-B44E-C1DCD29FDCD6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="934F40BA-4761-AAD0-2C06-FCDF652C5180" name="FAC_TIPO_OBT_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:52:20 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0095361F-CEEA-3701-A0DD-8B32BBCBFC8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="357E1667-770A-BFBD-2A3E-030110E1AA47" name="FAC_PAG_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:57:31 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB4C8835-93BB-2E2E-D6B9-E83D184D5CDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

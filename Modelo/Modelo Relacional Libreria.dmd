@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo Relacional Libreria" id="8D346730-F300-D38B-424E-59445B0A2E71" version="3.5">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 15:55:15 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8D346730-F300-D38B-424E-59445B0A2E71</designId>
+</OSDM_Design>

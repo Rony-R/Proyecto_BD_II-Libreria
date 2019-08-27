@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4ECDE5B6-7B5C-AD85-7F2E-200A15B140F3" name="TBL_GENEROS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:29 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_GENERO" id="93C8DA2C-4B47-19B5-EBB4-6D035CB0ECA4">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_GENERO" id="C7E97B2E-A754-F8DF-903D-AF3F16CC1784">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81AFF024-2112-F8A3-8999-ED113684018A" name="TBL_GENEROS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:36:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93C8DA2C-4B47-19B5-EBB4-6D035CB0ECA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

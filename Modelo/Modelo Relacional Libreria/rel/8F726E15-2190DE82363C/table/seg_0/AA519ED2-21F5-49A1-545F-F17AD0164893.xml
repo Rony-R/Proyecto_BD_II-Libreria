@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA519ED2-21F5-49A1-545F-F17AD0164893" name="TBL_PRESTAMOS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:04:19 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_36</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRESTAMO" id="504ACD19-1D66-F07B-DC45-695FC54C1071">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:04:38 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INICIO" id="312FEEB4-AD1A-72B7-0DCD-D44052AB2A09">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:04:55 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_MAX" id="084B6BCB-0606-5CD4-6F53-80DD02998A7D">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:05:06 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0705E3F5-CE64-9DD0-3FD5-A8772034D06B" name="TBL_PRESTAMOS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 17:04:38 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="504ACD19-1D66-F07B-DC45-695FC54C1071"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

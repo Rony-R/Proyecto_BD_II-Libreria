@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2B5942EF-8327-9433-B39E-616D749F404B" containerWithKeyObject="8C46BEE6-2271-348C-1766-58CB5BF3887E" localFKIndex="FC14C60D-9747-CDDD-8406-C99CFE45B296" name="EMP_X_SUC_EMP_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:12:21 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_EMPLEADOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FE2BB564-341E-1561-AB93-E9A43FE76F6B</referredTableID>
+<keyObject>295752DD-CA06-6791-33E8-61134778D546</keyObject>
+<referredKeyID>295752DD-CA06-6791-33E8-61134778D546</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_EMPLEADO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

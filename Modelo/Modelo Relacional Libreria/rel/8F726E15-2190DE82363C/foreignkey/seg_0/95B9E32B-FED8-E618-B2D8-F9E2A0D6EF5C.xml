@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="95B9E32B-FED8-E618-B2D8-F9E2A0D6EF5C" containerWithKeyObject="3FE9115C-746A-4A26-DA38-02B1E50AD219" localFKIndex="72983C8A-EF9D-B29B-EF38-AE1592FFF831" name="LIB_CAT_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:40:22 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_CATEGORIAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2CB84285-BE06-3236-57D3-28183A48E721</referredTableID>
+<keyObject>B1E1D816-7BEE-E8F5-8CCB-1B5BC5D88518</keyObject>
+<referredKeyID>B1E1D816-7BEE-E8F5-8CCB-1B5BC5D88518</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CATEGORIA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

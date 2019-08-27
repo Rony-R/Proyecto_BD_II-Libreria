@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F39B69AF-ECF9-24B8-E620-F9CB1C8B30DC" name="TBL_PASILLOS">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:18:45 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PASILLO" id="7AAB10B0-AD23-E40F-FFE3-746D3DBE1539">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:19:05 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_BODEGA" id="901A1E36-42C4-99F8-590A-9B33A20D74FB">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:19:36 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87CF1AA7-198D-4E9D-7DA5-1017495A0FEE" referredColumn="064683B0-A50F-8417-56B6-B5EB74DF891B"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_PASILLO" id="359C9E58-689C-092A-5CF7-A7C228827A45">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:19:28 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="25B8CC7F-315E-DDCA-DD41-A95667066E8D" name="TBL_PASILLOS_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:19:05 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AAB10B0-AD23-E40F-FFE3-746D3DBE1539"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCBCAFF8-4CFA-68EC-57E0-D4A8694B3490" name="PAS_BOD_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:19:36 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="901A1E36-42C4-99F8-590A-9B33A20D74FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

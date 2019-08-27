@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C43AF0A2-70E8-C43F-4809-74656C136587" name="TBL_TIPO_PAGO">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:58:13 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<ordsAlias>table_34</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_PAGO" id="E9A0AAAB-6D19-4445-53D4-598097D87E16">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:58:49 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION" id="782EA442-7FDE-34EE-EB1C-0F767D09624E">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:58:49 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0DF837F-AD57-B099-1290-998748EBE9B8" name="TBL_TIPO_PAGO_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-23 16:58:49 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9A0AAAB-6D19-4445-53D4-598097D87E16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
