@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo Libro mas vendido" id="B09F714E-1A84-EA21-922B-C6689C9DE5E8" version="3.5">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 03:08:02 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>B09F714E-1A84-EA21-922B-C6689C9DE5E8</designId>
+</OSDM_Design>

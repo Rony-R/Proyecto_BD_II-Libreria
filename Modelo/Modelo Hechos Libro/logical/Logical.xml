@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="CC5B5A26-DED5-0213-8D40-757851597A26" mainViewID="A20F205F-1387-DC78-5F83-40521751F588">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 03:08:02 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

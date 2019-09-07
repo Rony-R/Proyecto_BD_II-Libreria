@@ -18,9 +18,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ID_PAGO" id="A3F7E255-788A-45E4-7AE8-937128E41F56">
+<Column name="ID_PRESTAMO" id="7C71C50F-97FF-D13A-767E-9CB79634E0A0">
 <createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 17:07:22 UTC</createdTime>
+<createdTime>2019-08-30 03:01:52 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -29,8 +29,18 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="3B86FA26-F15F-0333-4285-56F11DFFCEF6" referredColumn="688EC5E3-F1D2-8097-25B7-AEEF3002385E"/>
+<colAssociation fkAssociation="A11FEC85-7358-9B8F-7673-CAB47463B38D" referredColumn="504ACD19-1D66-F07B-DC45-695FC54C1071"/>
 </associations>
+</Column>
+<Column name="DIAS_RETRASO" id="D7213A68-743C-B2D5-64E1-FE1BEADF2490">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:02:54 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="MONTO_MORA" id="2C339EFF-92E2-D80C-D7DC-7F1F814BACB5">
 <createdBy>RonyR</createdBy>
@@ -53,6 +63,16 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="TARIFA_X_DIA" id="D6AEFA03-2F4B-57A9-47DF-3DB40BAA2EF1">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:03:13 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="631B12DC-30CF-9646-E4B3-F900610D023F" name="TBL_MORA_PK">
@@ -66,14 +86,14 @@
 <colUsage columnID="75227C1C-C81B-9DBD-779E-7B0BC970AA0E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="99108659-D69B-4103-7EEE-EE937180998F" name="MORA_PAGOS_FK">
+<ind_PK_UK id="3BA920D7-2F74-18DA-F4E8-DFC0D5967184" name="MORA_PREST_LIBRO_FK">
 <createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 17:07:22 UTC</createdTime>
+<createdTime>2019-08-30 03:01:52 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A3F7E255-788A-45E4-7AE8-937128E41F56"/>
+<colUsage columnID="7C71C50F-97FF-D13A-767E-9CB79634E0A0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -32,16 +32,29 @@
 <colAssociation fkAssociation="EF0FF993-C0AA-4738-C79C-6417517B27E0" referredColumn="31DB6826-C117-B667-FDE5-1FE6520AEA5A"/>
 </associations>
 </Column>
+<Column name="ID_LIBRO" id="5C030537-8548-2EAA-F6C2-C42915D86A86">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 15:57:58 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1543D3B4-3F3F-8CFB-4061-FEFF92954920" referredColumn="C23D038B-92B8-1AE7-2376-1A5C7C47C60A"/>
+</associations>
+</Column>
 <Column name="DESCRIPCION_CUBICULO" id="1F06E61B-5A53-56F5-D720-ED7E971B24CF">
 <createdBy>RonyR</createdBy>
 <createdTime>2019-08-23 16:22:00 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -65,6 +78,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B30E6659-492B-8024-A2FD-500606C8D44C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D38F591A-6238-3060-5AB5-9E17F7FCC3C0" name="CUB_LIB_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 15:57:58 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C030537-8548-2EAA-F6C2-C42915D86A86"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

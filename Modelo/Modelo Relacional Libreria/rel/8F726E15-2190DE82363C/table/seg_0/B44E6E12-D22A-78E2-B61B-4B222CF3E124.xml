@@ -83,7 +83,6 @@
 <createdBy>RonyR</createdBy>
 <createdTime>2019-08-23 16:10:00 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

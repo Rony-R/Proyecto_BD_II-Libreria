@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F230CD2D-0AD5-114E-07A5-540E541688CA" containerWithKeyObject="AC48C1FD-02BD-80B7-0A62-62936BA8059B" localFKIndex="B874B357-14DD-BEF7-98F5-249736E46B85" name="PAGOS_TIPO_PAGO_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 02:56:46 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_TIPO_PAGO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C43AF0A2-70E8-C43F-4809-74656C136587</referredTableID>
+<keyObject>B0DF837F-AD57-B099-1290-998748EBE9B8</keyObject>
+<referredKeyID>B0DF837F-AD57-B099-1290-998748EBE9B8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO_PAGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

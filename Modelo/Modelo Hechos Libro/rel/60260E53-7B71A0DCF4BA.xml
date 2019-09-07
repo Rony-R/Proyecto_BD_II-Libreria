@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="60260E53-1716-7C14-59FA-7B71A0DCF4BA" mainViewID="E3C3166C-0F4A-ACA9-8DEB-32FBE6D19744">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 03:08:27 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A11FEC85-7358-9B8F-7673-CAB47463B38D" containerWithKeyObject="A65DD131-E940-96AE-6965-810A6A2EF0D1" localFKIndex="3BA920D7-2F74-18DA-F4E8-DFC0D5967184" name="MORA_PREST_LIBRO_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:01:52 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_PRESTAMOS_LIBRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AA519ED2-21F5-49A1-545F-F17AD0164893</referredTableID>
+<keyObject>0705E3F5-CE64-9DD0-3FD5-A8772034D06B</keyObject>
+<referredKeyID>0705E3F5-CE64-9DD0-3FD5-A8772034D06B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PRESTAMO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

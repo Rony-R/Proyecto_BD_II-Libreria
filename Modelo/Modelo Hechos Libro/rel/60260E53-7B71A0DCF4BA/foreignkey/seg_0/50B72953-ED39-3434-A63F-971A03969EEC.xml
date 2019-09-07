@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="50B72953-ED39-3434-A63F-971A03969EEC" containerWithKeyObject="738680D3-2EAB-0719-CB75-7178AFAE5821" localFKIndex="6631AF0C-9573-0C77-5DF7-A9F8BF1F04BE" name="HEC_LIB_CAT_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-09-02 22:59:54 UTC</createdTime>
+<ownerDesignName>Modelo Hechos Libro</ownerDesignName>
+<referredTableLongName>TBL_CATEGORIAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>809E12FC-67E9-722C-DEBE-2BC7D20992B7</referredTableID>
+<keyObject>528921F0-3807-0C9B-B573-DF86046FFD6B</keyObject>
+<referredKeyID>528921F0-3807-0C9B-B573-DF86046FFD6B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CATEGORIA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

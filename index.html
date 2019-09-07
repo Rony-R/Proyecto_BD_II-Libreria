@@ -30,24 +30,30 @@
                         <div id="body-data-source" class="card-body">
 
                             <div class="col mb-4">
-                                <select class="dropdown btn btn-secondary" id="">
+                                <select class="dropdown btn btn-secondary" id="select-origen">
                                     <option value="0">Seleccionar Origen</option>
                                     <option value="1">Tabla</option>
                                     <option value="2">Consulta</option>
                                 </select>
                             </div>
 
-                            <div class="col mb-4">
-                                <select class="dropdown btn btn-secondary" id="">
-                                    <option value="0">Seleccionar Tabla</option>
-                                    <option value="1">Tabla 1</option>
-                                    <option value="2">Tabla 2</option>
-                                </select>
+                            <div id="contenido-origen">
+
+                                <div id="div-select-tabla" class="col mb-4 d-none">
+                                    <select name="tablas" id="selec-tabla" class="dropdown btn btn-secondary">
+                                        <option value="0">Seleccionar Tabla</option>
+                                    </select>
+                                </div>
+
+                                <div id="div-txta-sql" class="col mb-2 d-none">
+                                    <textarea placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source" cols="30" rows="10"></textarea>
+                                </div>
+
                             </div>
 
-                            <div class="col">
-                                <textarea name="" id="txta-dts-1" cols="30" rows="10"></textarea>
-                            </div>
+                            <div id="chk-campos"></div>
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-source">Go</button>
 
                         </div>
                     </div>
@@ -58,8 +64,22 @@
 
                     <div class="card text-white bg-primary mb-3">
                         <div class="card-header">OLEDB Command</div>
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div id="body-command" class="card-body">
+                          
+                            <div class="col mb-4">
+                                <select class="dropdown btn btn-secondary" id="">
+                                    <option value="0">Seleccionar Conexion</option>
+                                    <option value="1">Conexion OLTP</option>
+                                    <option value="2">Conexion OLAP</option>
+                                </select>
+                            </div>
+
+                            <div class="col mb-2">
+                                <textarea placeholder="Ingrese la consulta sql:" name="" id="txta-dts-1" cols="30" rows="5"></textarea>
+                            </div>
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-comman">Go</button>
+
                         </div>
                     </div>
 
@@ -70,7 +90,53 @@
                     <div class="card text-white bg-primary mb-3">
                         <div class="card-header">Data Conversion</div>
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          
+                            <div class="col ml-3">
+
+                                <label class="row" for=""><b>Nombre del campo</b></label>
+
+                                <div class="col">
+
+                                    <input type="radio" name="trans1" value="1"> Minusculas <br>
+                                    <input type="radio" name="trans1" value="2"> Mayusculas <br>
+                                    <input type="radio" name="trans1" value="3"> Fecha <br>
+
+                                    <div class="ml-4" id="chk-fecha">
+                                        <input type="checkbox" name="fech1" id=""> Dia <br>
+                                        <input type="checkbox" name="fech1" id=""> Mes <br>
+                                        <input type="checkbox" name="fech1" id=""> Año 
+                                    </div>
+
+                                    <input type="radio" name="trans1" value="4"> Concatenacion
+
+                                </div>
+
+                            </div>
+
+                            <div class="col mt-3 ml-3">
+
+                                <label class="row" for=""><b>Nombre del campo</b></label>
+
+                                <div class="col">
+
+                                    <input type="radio" name="trans2" value="1"> Minusculas <br>
+                                    <input type="radio" name="trans2" value="2"> Mayusculas <br>
+                                    <input type="radio" name="trans2" value="3"> Fecha <br>
+
+                                    <div class="ml-4" id="chk-fecha">
+                                        <input type="checkbox" name="fech1" id=""> Dia <br>
+                                        <input type="checkbox" name="fech1" id=""> Mes <br>
+                                        <input type="checkbox" name="fech1" id=""> Año 
+                                    </div>
+
+                                    <input type="radio" name="trans2" value="4"> Concatenacion                                   
+
+                                </div>
+
+                            </div>
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-conversion">Go</button>
+
                         </div>
                     </div>
     
@@ -81,7 +147,17 @@
                     <div class="card text-white bg-primary mb-3">
                         <div class="card-header">OLEDB Destination</div>
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          
+                            <div class="col mb-4">
+                                <select class="dropdown btn btn-secondary" id="">
+                                    <option value="0">Seleccionar Destino</option>
+                                    <option value="1">Tabla 1</option>
+                                    <option value="2">Tabla 2</option>
+                                </select>
+                            </div> 
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-destination">Go</button>
+
                         </div>
                     </div>
         

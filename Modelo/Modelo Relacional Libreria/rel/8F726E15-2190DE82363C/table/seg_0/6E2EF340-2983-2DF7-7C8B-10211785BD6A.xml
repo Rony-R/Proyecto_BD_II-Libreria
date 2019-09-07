@@ -46,14 +46,32 @@
 <colAssociation fkAssociation="1990FCE3-7AD6-1F2E-7765-1F26451E9A07" referredColumn="9F22AEF4-24D0-ED89-C998-64E5D780CB8C"/>
 </associations>
 </Column>
-<Column name="CANTIDAD" id="D2653304-DC19-B315-4C06-94FE0CDBA3B5">
+<Column name="ID_DESCUENTO" id="1C2708E5-07A7-3DFE-BE87-4352BEB4735F">
 <createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 16:53:27 UTC</createdTime>
+<createdTime>2019-08-30 02:07:01 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF80C193-09DD-3E3D-6574-12C1B562657C" referredColumn="E2A8FA02-3DB7-A12A-32FD-4AC5EF3E92D7"/>
+</associations>
+</Column>
+<Column name="PRECIO" id="0F86419E-12AB-297E-62C3-007F533BB150">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 02:05:51 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -87,6 +105,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="52478487-A208-9D7B-524D-EDB71864F413"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC30B248-582C-040F-343B-D792693459AF" name="DET_FAC_DESC_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 02:07:01 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C2708E5-07A7-3DFE-BE87-4352BEB4735F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

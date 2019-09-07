@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA519ED2-21F5-49A1-545F-F17AD0164893" name="TBL_PRESTAMOS">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA519ED2-21F5-49A1-545F-F17AD0164893" name="TBL_PRESTAMOS_LIBRO">
 <createdBy>RonyR</createdBy>
 <createdTime>2019-08-23 17:04:19 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
@@ -17,6 +17,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FACTURA" id="1765E13C-6F32-45FE-F9AF-EBE0BC60D60E">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:00:57 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="586082E6-3855-7BB5-9621-D7D129C6CCEA" referredColumn="9F22AEF4-24D0-ED89-C998-64E5D780CB8C"/>
+</associations>
 </Column>
 <Column name="FECHA_INICIO" id="312FEEB4-AD1A-72B7-0DCD-D44052AB2A09">
 <createdBy>RonyR</createdBy>
@@ -49,6 +63,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="504ACD19-1D66-F07B-DC45-695FC54C1071"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5E5B33E-3C4B-3E11-82FC-5C56290988A6" name="PREST_LIBRO_FACT_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:00:57 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1765E13C-6F32-45FE-F9AF-EBE0BC60D60E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

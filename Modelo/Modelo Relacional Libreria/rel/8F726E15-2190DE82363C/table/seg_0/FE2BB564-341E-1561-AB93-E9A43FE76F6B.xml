@@ -32,10 +32,11 @@
 <colAssociation fkAssociation="45A4E647-134F-EBF3-24DF-0510F6F4FAC1" referredColumn="C2A28FE6-9246-E814-1B80-D1EC5A7EC672"/>
 </associations>
 </Column>
-<Column name="ID_JEFE" id="01525949-3156-7628-8C5B-3FA143466CB5">
+<Column name="ID_JEFE" id="764592A6-E72C-E285-6EB9-E140447909CE">
 <createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 16:00:24 UTC</createdTime>
+<createdTime>2019-08-30 01:49:38 UTC</createdTime>
 <ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -43,19 +44,8 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="8160E5BC-0534-5D77-2FAA-8783BDE1AE5F" referredColumn="A789CF49-2682-A27E-9601-ECC8B4BC95C8"/>
+<colAssociation fkAssociation="7E9ACB7D-76AF-C754-D52D-42B1D21ACE84" referredColumn="FE7B272E-B5FC-3E22-D352-CA0D68E05BC7"/>
 </associations>
-</Column>
-<Column name="FECHA_INGRESO" id="918D13D5-4461-353D-9B8F-F8440ECF4B5D">
-<createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 15:58:24 UTC</createdTime>
-<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -70,16 +60,6 @@
 <colUsage columnID="FE7B272E-B5FC-3E22-D352-CA0D68E05BC7"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="FB2E5EB4-B5C3-22E1-A62C-17C3E2D48067" name="EMP_JEF_FK">
-<createdBy>RonyR</createdBy>
-<createdTime>2019-08-23 16:00:24 UTC</createdTime>
-<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="01525949-3156-7628-8C5B-3FA143466CB5"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="3ED11A0C-5693-0F0E-C8C2-7BE95D616E7A" name="EMP_PER_FK">
 <createdBy>RonyR</createdBy>
 <createdTime>2019-08-23 16:02:50 UTC</createdTime>
@@ -88,6 +68,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="0B6E51D1-C062-A60F-5816-76AE5CA91A8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B52BD93A-76EA-446A-C79D-EBC202F2E5CF" name="EMP_EMP_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 01:49:38 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="764592A6-E72C-E285-6EB9-E140447909CE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

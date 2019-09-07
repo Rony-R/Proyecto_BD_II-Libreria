@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF80C193-09DD-3E3D-6574-12C1B562657C" containerWithKeyObject="6E2EF340-2983-2DF7-7C8B-10211785BD6A" localFKIndex="EC30B248-582C-040F-343B-D792693459AF" name="DET_FAC_DESC_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 02:07:01 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<referredTableLongName>TBL_DESCUENTOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BBA3ED77-1106-5F2F-C15A-3255F202E078</referredTableID>
+<keyObject>F0A4D491-0415-F52C-E9E5-F161182B82EC</keyObject>
+<referredKeyID>F0A4D491-0415-F52C-E9E5-F161182B82EC</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_DESCUENTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

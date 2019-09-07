@@ -18,6 +18,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="ID_PROVEEEDOR" id="AEF6E0E0-3D59-F562-0362-F61688A819CF">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 16:25:45 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFBBD51A-AEB4-7D94-DBA9-C12449FFAACB" referredColumn="66A36A1C-AE5D-7F5E-578B-C1D3888706D6"/>
+</associations>
+</Column>
 <Column name="NOMBRE_LIBRERIA" id="C21A2D83-8EE5-8B54-96A6-C394415F4E44">
 <createdBy>RonyR</createdBy>
 <createdTime>2019-08-23 16:14:33 UTC</createdTime>
@@ -73,6 +87,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C3587AF7-0624-B538-7151-D20EEEFF6828"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA9860F3-22B1-9DFF-4640-E59782332EE4" name="LIBR_PROV_FK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-29 16:25:45 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEF6E0E0-3D59-F562-0362-F61688A819CF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

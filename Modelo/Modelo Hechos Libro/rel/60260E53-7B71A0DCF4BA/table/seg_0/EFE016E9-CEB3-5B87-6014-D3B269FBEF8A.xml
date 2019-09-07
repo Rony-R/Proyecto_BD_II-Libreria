@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFE016E9-CEB3-5B87-6014-D3B269FBEF8A" name="TBL_SUCURSALES">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:52:08 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SUCURSAL" id="6469795A-31B8-781D-6553-91504C789C44">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:52:29 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_SUCURSAL" id="9ECCA1AE-DCF2-D2E0-852B-4A55B01FB3B8">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:52:55 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIRECCION" id="843EF006-3192-9A40-63A3-8C8B38BA9150">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:53:08 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A04264FA-C825-1489-2DCC-D1A555236CF7" name="TBL_SUCURSALES_PK">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-08-30 03:52:29 UTC</createdTime>
+<ownerDesignName>Modelo Libro mas vendido</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6469795A-31B8-781D-6553-91504C789C44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
