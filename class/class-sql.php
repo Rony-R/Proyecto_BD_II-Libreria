@@ -25,5 +25,29 @@
 
 		}
 
+		public function traerCamposTabla($conexion, $tabla)
+		{
+			$instruccion = "SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = '$tabla'";
+
+			$resultado = array();
+
+			$resultado = $conexion->obtenerFila2($instruccion);
+
+			return json_encode($resultado);
+
+		}
+
+		public function traerTablasBD2($conexion)
+		{
+			$instruccion = "SELECT TABLE_NAME FROM USER_TABLES";
+
+			$resultado = array();
+
+			$resultado = $conexion->obtenerFila2($instruccion);
+
+			return json_encode($resultado);
+
+		}
+
 	}
 ?>

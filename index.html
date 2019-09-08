@@ -51,7 +51,10 @@
 
                             </div>
 
-                            <div id="chk-campos"></div>
+                            <div id="chk-campos" class="col d-none">
+                                <label for="">Campos de la tabla</label> <br>
+                                <form id="form-chk"></form>
+                            </div>
 
                             <button class="btn btn-light ml-3 mt-3" id="btn-source">Go</button>
 
@@ -75,10 +78,10 @@
                             </div>
 
                             <div class="col mb-2">
-                                <textarea placeholder="Ingrese la consulta sql:" name="" id="txta-dts-1" cols="30" rows="5"></textarea>
+                                <textarea placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command" cols="30" rows="5"></textarea>
                             </div>
 
-                            <button class="btn btn-light ml-3 mt-3" id="btn-comman">Go</button>
+                            <button class="btn btn-light ml-3 mt-3" id="btn-command">Go</button>
 
                         </div>
                     </div>
@@ -90,50 +93,12 @@
                     <div class="card text-white bg-primary mb-3">
                         <div class="card-header">Data Conversion</div>
                         <div class="card-body">
-                          
-                            <div class="col ml-3">
 
-                                <label class="row" for=""><b>Nombre del campo</b></label>
+                            <div id="div-campos-conversion"></div>
 
-                                <div class="col">
+                            <div id="div-num-campos" class="d-none"></div>
 
-                                    <input type="radio" name="trans1" value="1"> Minusculas <br>
-                                    <input type="radio" name="trans1" value="2"> Mayusculas <br>
-                                    <input type="radio" name="trans1" value="3"> Fecha <br>
-
-                                    <div class="ml-4" id="chk-fecha">
-                                        <input type="checkbox" name="fech1" id=""> Dia <br>
-                                        <input type="checkbox" name="fech1" id=""> Mes <br>
-                                        <input type="checkbox" name="fech1" id=""> Año 
-                                    </div>
-
-                                    <input type="radio" name="trans1" value="4"> Concatenacion
-
-                                </div>
-
-                            </div>
-
-                            <div class="col mt-3 ml-3">
-
-                                <label class="row" for=""><b>Nombre del campo</b></label>
-
-                                <div class="col">
-
-                                    <input type="radio" name="trans2" value="1"> Minusculas <br>
-                                    <input type="radio" name="trans2" value="2"> Mayusculas <br>
-                                    <input type="radio" name="trans2" value="3"> Fecha <br>
-
-                                    <div class="ml-4" id="chk-fecha">
-                                        <input type="checkbox" name="fech1" id=""> Dia <br>
-                                        <input type="checkbox" name="fech1" id=""> Mes <br>
-                                        <input type="checkbox" name="fech1" id=""> Año 
-                                    </div>
-
-                                    <input type="radio" name="trans2" value="4"> Concatenacion                                   
-
-                                </div>
-
-                            </div>
+                            <div id="div-tabla" class="d-none"></div>
 
                             <button class="btn btn-light ml-3 mt-3" id="btn-conversion">Go</button>
 
@@ -148,13 +113,17 @@
                         <div class="card-header">OLEDB Destination</div>
                         <div class="card-body">
                           
-                            <div class="col mb-4">
-                                <select class="dropdown btn btn-secondary" id="">
-                                    <option value="0">Seleccionar Destino</option>
-                                    <option value="1">Tabla 1</option>
-                                    <option value="2">Tabla 2</option>
-                                </select>
+                            <div id="contenido-destino">
+
+                                <div id="div-select-tabla-destino" class="col mb-4">
+                                    <select name="tablas-destino" id="selec-tabla-destino" class="dropdown btn btn-secondary">
+                                        <option value="0">Seleccionar Tabla</option>
+                                    </select>
+                                </div>
+        
                             </div> 
+
+                            <div id="div-todo-destination" class="d-none"></div>
 
                             <button class="btn btn-light ml-3 mt-3" id="btn-destination">Go</button>
 

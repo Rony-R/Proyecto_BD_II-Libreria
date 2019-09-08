@@ -24,6 +24,46 @@
 
         break;
 
+        case "'traer-campos-tablas'":
+
+            $consulta2 = new sql($con_oltp, $con_olap);
+
+            echo $consulta2->traerCamposTabla($con_oltp, $_GET["tabla"]);
+
+        break;
+
+        case "'eliminar-datos-command'":
+        break;
+
+        case "'traer-tablas-olap'":
+
+            $consulta = new sql($con_oltp, $con_olap);
+
+            echo $consulta->traerTablasBD2($con_olap);
+
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
         case "''":
         break;
 
