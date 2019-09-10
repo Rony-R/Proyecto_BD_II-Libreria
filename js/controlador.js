@@ -7,7 +7,7 @@ $(document).ready(function(){
         
         },
         error: function(){
-        console.log("Ocurrio un error!!!");
+        console.log("Ocurrio un error en: generar-columnas-etl!!!");
         }
     });
 
@@ -30,7 +30,7 @@ $("#select-origen").change(function(){
         },
         error: function(e){
             console.log(e);
-            console.log("Ocurrio un error en: traer-tablas-oltp");
+            console.log("Ocurrio un error en: traer-tablas-oltp; controlador");
         }
     });
 
@@ -69,18 +69,20 @@ $("#selec-tabla").change(function(){
 
             for(var i=0; i<respuesta.length; i++)
             {
-                $("#form-chk").append('<input type="checkbox" name="campo-tabla" value="'+respuesta[i].COLUMN_NAME+'">'+respuesta[i].COLUMN_NAME+'<br>');
+                $("#form-chk").append('<input type="checkbox" id="chk-etl-1" name="campo-tabla" value="'+respuesta[i].COLUMN_NAME+'">'+respuesta[i].COLUMN_NAME+'<br>');
             }
 
         },
         error: function(e){
             console.log(e);
-            console.log("Ocurrio un error en: traer-campos-tablas");
+            console.log("Ocurrio un error en: traer-campos-tablas; controlador");
         }
     });
 
-    console.log("La tabla es: ");
-    console.log($('select[name=tablas]').val());
+    //console.log("La tabla es: ");
+    //console.log($('select[name=tablas]').val());
+
+    $("#tabla-1").html("ETL "+$('select[name=tablas]').val());
 
     $("#div-todo-destination").append(
         '<input id="input-tabla-destination" type="checkbox" value="'+$('select[name=tablas]').val()+'">'
@@ -100,7 +102,7 @@ $("#btn-source").click(function(){
 
     if($('select[id=select-origen]').val() == 1)
     { 
-        $('input[type=checkbox]').each(function(){
+        $('input:checkbox[id=chk-etl-1]:checked').each(function(){
             if(this.checked)
             {
                 campos[iCamp] = $(this).val();
@@ -140,12 +142,16 @@ $("#btn-source").click(function(){
             '<input type="radio" id="num-campos" value="'+campos.length+'">'
         );
 
-        console.log("Los campos son: ");
+        /*console.log("Los campos son: ");
         for(var i=0; i<campos.length; i++)
-            console.log("campo"+i+'='+campos[i]);
+            console.log("campo"+i+'='+campos[i]);*/
 
         $("#div-todo-destination").append(
             '<input id="num-campos-destination" type="checkbox" value="'+campos.length+'">'
+        );
+
+        $("#div-todo-destination").append(
+            '<input id="tipo-origen" type="checkbox" value="1">'
         );
         
         for(var i=0; i<campos.length; i++)
@@ -198,17 +204,36 @@ $("#btn-source").click(function(){
             '<input type="radio" id="num-campos" value="'+campos2.length+'">'
         );
 
-        console.log("Datos source consulta: ");
+        /*console.log("Datos source consulta: ");
         for(var i=0; i<campos2.length; i++)
-            console.log("campo"+i+'='+campos2[i]);
+            console.log("campo"+i+'='+campos2[i]);*/
+
+        var datosTablaSql = '';
+
+        var posicion2 = datosSource.indexOf("FROM");
+        
+        datosTablaSql = datosSource.substring(posicion2, datosSource.length);
         
         $("#div-todo-destination").append(
-            '<input id="input-tabla-destination" type="checkbox" value="'+$("#sql-txta-source").val()+'">'
+            //'<input id="input-tabla-destination" type="checkbox" value="'+$("#sql-txta-source").val()+'">'
+            '<input id="input-tabla-destination" type="checkbox" value="'+datosTablaSql+'">'
         );
         
         $("#div-todo-destination").append(
             '<input id="num-campos-destination" type="checkbox" value="'+campos2.length+'">'
         );
+
+        $("#div-todo-destination").append(
+            '<input id="tipo-origen" type="checkbox" value="2">'
+        );
+
+        var pos = datosSource.indexOf("FROM");
+
+        var pos = pos + 4;
+
+        var nomTab = datosSource.substring(pos, datosSource.length);
+
+        $("#h2-tabla").html("ETL "+nomTab);
         
         for(var i=0; i<campos2.length; i++)
         {
@@ -232,7 +257,7 @@ $("#btn-command").click(function(){
         },
         error: function(e){
             console.log(e);
-            console.log("Ocurrio un error en: eliminar-datos-command");
+            console.log("Ocurrio un error en: eliminar-datos-command; controlador");
         }
     });
 
@@ -250,9 +275,9 @@ $("#btn-conversion").click(function(){
         datosConversion[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val()
     }
 
-    console.log("Las conversiones son: ");
+    /*console.log("Las conversiones son: ");
     for(var i=0; i<datosConversion.length; i++)
-        console.log(datosConversion[i]);
+        console.log(datosConversion[i]);*/
 
     $("#div-todo-destination").append(
         '<input id="num-conversiones-destination" type="checkbox" value="'+datosConversion.length+'">'
@@ -280,7 +305,7 @@ $("#btn-conversion").click(function(){
         },
         error: function(e){
             console.log(e);
-            console.log("Ocurrio un error en: traer-tablas-oltp");
+            console.log("Ocurrio un error en: traer-tablas-oltp; controlador");
         }
     });
     
@@ -306,14 +331,17 @@ $("#btn-destination").click(function(){
 
 
     //IMPRESION:
-    console.log("Los datos para crear la consulta definitiva son: ");
+    console.log("Datos Consulta Definitiva controlador : ");
+
     console.log(nomTabla);
 
     for(var i=0; i<columnas.length; i++)
-    {
         console.log(columnas[i]);
+
+    for(var i=0; i<columnas.length; i++)
         console.log(conversiones[i]);
-    }
+
+    console.log("El tipo de origen es: " +$("#tipo-origen").val());
 
 });
 

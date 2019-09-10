@@ -19,155 +19,604 @@
 
         <div id="fila-principal" class="row mt-5 mb-5">
 
+            <!--Inicio ETL-1-->
             <div id="col-etl-1" class="col-lg-4">
 
-                <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
+                <input type="text" id="input-col-etl-1" class="d-none" value="col-etl-1">
 
-                <div class="contenedor-azul">
+            <h2 id="tabla-1" class="h2-tabla"></h1>
 
-                    <div class="card text-white bg-primary">
-                        <div class="card-header">Data Source</div>
-                        <div id="body-data-source" class="card-body">
+            <div class="contenedor-azul mb-2">
 
-                            <div class="col mb-4">
-                                <select class="dropdown btn btn-secondary" id="select-origen">
-                                    <option value="0">Seleccionar Origen</option>
-                                    <option value="1">Tabla</option>
-                                    <option value="2">Consulta</option>
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Data Source</div>
+                    <div id="body-data-source" class="card-body">
+
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="select-origen">
+                                <option value="0">Seleccionar Origen</option>
+                                <option value="1">Tabla</option>
+                                <option value="2">Consulta</option>
+                            </select>
+                        </div>
+
+                        <div id="contenido-origen">
+
+                            <div id="div-select-tabla" class="col mb-4 d-none">
+                                <select name="tablas" id="selec-tabla" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
                                 </select>
                             </div>
 
-                            <div id="contenido-origen">
-
-                                <div id="div-select-tabla" class="col mb-4 d-none">
-                                    <select name="tablas" id="selec-tabla" class="dropdown btn btn-secondary">
-                                        <option value="0">Seleccionar Tabla</option>
-                                    </select>
-                                </div>
-
-                                <div id="div-txta-sql" class="col mb-2 d-none">
-                                    <textarea placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source" cols="30" rows="10"></textarea>
-                                </div>
-
+                            <div id="div-txta-sql" class="col mb-2 d-none">
+                                <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source" cols="30" rows="10"></textarea>
                             </div>
 
-                            <div id="chk-campos" class="col d-none">
-                                <label for="">Campos de la tabla</label> <br>
-                                <form id="form-chk"></form>
-                            </div>
-
-                            <button class="btn btn-light ml-3 mt-3" id="btn-source">Go</button>
-
                         </div>
-                    </div>
 
+                        <div id="chk-campos" class="col d-none">
+                            <label for="">Campos de la tabla</label> <br>
+                            <form id="form-chk"></form>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-source">Go</button>
+
+                    </div>
                 </div>
 
-                <div class="contenedor-azul">
-
-                    <div class="card text-white bg-primary mb-3">
-                        <div class="card-header">OLEDB Command</div>
-                        <div id="body-command" class="card-body">
-                          
-                            <div class="col mb-4">
-                                <select class="dropdown btn btn-secondary" id="">
-                                    <option value="0">Seleccionar Conexion</option>
-                                    <option value="1">Conexion OLTP</option>
-                                    <option value="2">Conexion OLAP</option>
-                                </select>
-                            </div>
-
-                            <div class="col mb-2">
-                                <textarea placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command" cols="30" rows="5"></textarea>
-                            </div>
-
-                            <button class="btn btn-light ml-3 mt-3" id="btn-command">Go</button>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="contenedor-azul">
-
-                    <div class="card text-white bg-primary mb-3">
-                        <div class="card-header">Data Conversion</div>
-                        <div class="card-body">
-
-                            <div id="div-campos-conversion"></div>
-
-                            <div id="div-num-campos" class="d-none"></div>
-
-                            <div id="div-tabla" class="d-none"></div>
-
-                            <button class="btn btn-light ml-3 mt-3" id="btn-conversion">Go</button>
-
-                        </div>
-                    </div>
-    
-                </div>
-
-                <div class="contenedor-azul">
-
-                    <div class="card text-white bg-primary mb-3">
-                        <div class="card-header">OLEDB Destination</div>
-                        <div class="card-body">
-                          
-                            <div id="contenido-destino">
-
-                                <div id="div-select-tabla-destino" class="col mb-4">
-                                    <select name="tablas-destino" id="selec-tabla-destino" class="dropdown btn btn-secondary">
-                                        <option value="0">Seleccionar Tabla</option>
-                                    </select>
-                                </div>
-        
-                            </div> 
-
-                            <div id="div-todo-destination" class="d-none"></div>
-
-                            <button class="btn btn-light ml-3 mt-3" id="btn-destination">Go</button>
-
-                        </div>
-                    </div>
-        
-                </div>
-
-                
             </div>
 
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Command</div>
+                    <div id="body-command" class="card-body">
+                      
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="">
+                                <option value="0">Seleccionar Conexion</option>
+                                <option value="1">Conexion OLTP</option>
+                                <option value="2">Conexion OLAP</option>
+                            </select>
+                        </div>
+
+                        <div class="col mb-2">
+                            <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-command">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Data Conversion</div>
+                    <div class="card-body">
+
+                        <div id="div-campos-conversion"></div>
+
+                        <div id="div-num-campos" class="d-none"></div>
+
+                        <div id="div-tabla" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-conversion">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Destination</div>
+                    <div class="card-body">
+                      
+                        <div id="contenido-destino">
+
+                            <div id="div-select-tabla-destino" class="col mb-4">
+                                <select name="tablas-destino" id="selec-tabla-destino" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+    
+                        </div> 
+
+                        <div id="div-todo-destination" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-destination">Go</button>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            </div>
+            <!--Fin ETL-1-->
+
+            <!--Inicio ETL-2-->
             <div id="col-etl-2" class="col-lg-4">
 
-                <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
+                <input type="text" id="input-col-etl-2" class="d-none" value="col-etl-2">    
                 
+            <h2 id="tabla-2" class="h2-tabla"></h1>
+
+            <div class="contenedor-azul mb-2">
+
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Data Source</div>
+                    <div id="body-data-source" class="card-body">
+
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="select-origen-2">
+                                <option value="0">Seleccionar Origen</option>
+                                <option value="1">Tabla</option>
+                                <option value="2">Consulta</option>
+                            </select>
+                        </div>
+
+                        <div id="contenido-origen">
+
+                            <div id="div-select-tabla-2" class="col mb-4 d-none">
+                                <select name="tablas-2" id="selec-tabla-2" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+
+                            <div id="div-txta-sql-2" class="col mb-2 d-none">
+                                <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source-2" cols="30" rows="10"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div id="chk-campos-2" class="col d-none">
+                            <label for="">Campos de la tabla</label> <br>
+                            <form id="form-chk-2"></form>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-source-2">Go</button>
+
+                    </div>
+                </div>
+
             </div>
 
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Command</div>
+                    <div id="body-command" class="card-body">
+                      
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="">
+                                <option value="0">Seleccionar Conexion</option>
+                                <option value="1">Conexion OLTP</option>
+                                <option value="2">Conexion OLAP</option>
+                            </select>
+                        </div>
+
+                        <div class="col mb-2">
+                            <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command-2" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-command-2">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Data Conversion</div>
+                    <div class="card-body">
+
+                        <div id="div-campos-conversion-2"></div>
+
+                        <div id="div-num-campos-2" class="d-none"></div>
+
+                        <div id="div-tabla-2" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-conversion-2">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Destination</div>
+                    <div class="card-body">
+                      
+                        <div id="contenido-destino">
+
+                            <div id="div-select-tabla-destino" class="col mb-4">
+                                <select name="tablas-2-destino" id="selec-tabla-destino" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+    
+                        </div> 
+
+                        <div id="div-todo-destination-2" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-destination-2">Go</button>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            </div>
+            <!--Fin ETL-2-->
+
+            <!--Inicio ETL-3-->
             <div id="col-etl-3" class="col-lg-4">
 
-                <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
-                
+                <input type="text" id="input-col-etl-3" class="d-none" value="col-etl-3">
+
+            <h2 id="tabla-3" class="h2-tabla"></h1>
+
+            <div class="contenedor-azul mb-2">
+
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Data Source</div>
+                    <div id="body-data-source" class="card-body">
+
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="select-origen-3">
+                                <option value="0">Seleccionar Origen</option>
+                                <option value="1">Tabla</option>
+                                <option value="2">Consulta</option>
+                            </select>
+                        </div>
+
+                        <div id="contenido-origen">
+
+                            <div id="div-select-tabla-3" class="col mb-4 d-none">
+                                <select name="tablas-3" id="selec-tabla-3" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+
+                            <div id="div-txta-sql-3" class="col mb-2 d-none">
+                                <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source-3" cols="30" rows="10"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div id="chk-campos-3" class="col d-none">
+                            <label for="">Campos de la tabla</label> <br>
+                            <form id="form-chk-3"></form>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-source-3">Go</button>
+
+                    </div>
+                </div>
+
             </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Command</div>
+                    <div id="body-command" class="card-body">
+                      
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="">
+                                <option value="0">Seleccionar Conexion</option>
+                                <option value="1">Conexion OLTP</option>
+                                <option value="2">Conexion OLAP</option>
+                            </select>
+                        </div>
+
+                        <div class="col mb-2">
+                            <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command-3" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-command-3">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Data Conversion</div>
+                    <div class="card-body">
+
+                        <div id="div-campos-conversion-3"></div>
+
+                        <div id="div-num-campos-3" class="d-none"></div>
+
+                        <div id="div-tabla" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-conversion-3">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Destination</div>
+                    <div class="card-body">
+                      
+                        <div id="contenido-destino">
+
+                            <div id="div-select-tabla-destino-3" class="col mb-4">
+                                <select name="tablas-destino-3" id="selec-tabla-destino-3" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+    
+                        </div> 
+
+                        <div id="div-todo-destination-3" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-destination-3">Go</button>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            </div>
+            <!--Fin ETL-3-->
 
         </div>
 
         <div id="fila-secundaria" class="row mt-5">
 
-            <div id="col-etl-2" class="col-lg-4">
+            <!--Inicio ETL-4-->
+            <div id="col-etl-4" class="col-lg-4">
 
-                <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
-                        
+                <input type="text" id="input-col-etl-4" class="d-none" value="col-etl-4">    
+                
+            <h2 id="tabla-4" class="h2-tabla"></h1>
+
+            <div class="contenedor-azul mb-2">
+
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Data Source</div>
+                    <div id="body-data-source" class="card-body">
+
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="select-origen-4">
+                                <option value="0">Seleccionar Origen</option>
+                                <option value="1">Tabla</option>
+                                <option value="2">Consulta</option>
+                            </select>
+                        </div>
+
+                        <div id="contenido-origen">
+
+                            <div id="div-select-tabla-4" class="col mb-4 d-none">
+                                <select name="tablas-4" id="selec-tabla-4" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+
+                            <div id="div-txta-sql-4" class="col mb-2 d-none">
+                                <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source-4" cols="30" rows="10"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div id="chk-campos-4" class="col d-none">
+                            <label for="">Campos de la tabla</label> <br>
+                            <form id="form-chk-4"></form>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-source-4">Go</button>
+
+                    </div>
+                </div>
+
             </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Command</div>
+                    <div id="body-command" class="card-body">
+                      
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="">
+                                <option value="0">Seleccionar Conexion</option>
+                                <option value="1">Conexion OLTP</option>
+                                <option value="2">Conexion OLAP</option>
+                            </select>
+                        </div>
+
+                        <div class="col mb-2">
+                            <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command-4" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-command-4">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Data Conversion</div>
+                    <div class="card-body">
+
+                        <div id="div-campos-conversion-4"></div>
+
+                        <div id="div-num-campos-4" class="d-none"></div>
+
+                        <div id="div-tabla" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-conversion-4">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Destination</div>
+                    <div class="card-body">
+                      
+                        <div id="contenido-destino">
+
+                            <div id="div-select-tabla-destino" class="col mb-4">
+                                <select name="tablas-destino-4" id="selec-tabla-destino" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+    
+                        </div> 
+
+                        <div id="div-todo-destination-4" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-destination-4">Go</button>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            </div>
+            <!--Fin ETL-4-->
             
-            <div id="col-etl-2" class="col-lg-4">
+            <!--Inicio ETL-5-->
+            <div id="col-etl-5" class="col-lg-4">
 
-                <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
-                            
-            </div>
-            
-            <div id="col-etl-2" class="col-lg-4">
+                <input type="text" id="input-col-etl-5" class="d-none" value="col-etl-5">
 
-                 <h1 class="h1-tabla">Proyecto ETL BD 2</h1>
-                            
+            <h2 id="tabla-5" class="h2-tabla"></h1>
+
+            <div class="contenedor-azul mb-2">
+
+                <div class="card text-white bg-primary">
+                    <div class="card-header">Data Source</div>
+                    <div id="body-data-source" class="card-body">
+
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="select-origen-5">
+                                <option value="0">Seleccionar Origen</option>
+                                <option value="1">Tabla</option>
+                                <option value="2">Consulta</option>
+                            </select>
+                        </div>
+
+                        <div id="contenido-origen">
+
+                            <div id="div-select-tabla-5" class="col mb-4 d-none">
+                                <select name="tablas-5" id="selec-tabla-5" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+
+                            <div id="div-txta-sql-5" class="col mb-2 d-none">
+                                <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source-5" cols="30" rows="10"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div id="chk-campos-5" class="col d-none">
+                            <label for="">Campos de la tabla</label> <br>
+                            <form id="form-chk-5"></form>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-source-5">Go</button>
+
+                    </div>
+                </div>
+
             </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Command</div>
+                    <div id="body-command" class="card-body">
+                      
+                        <div class="col mb-4">
+                            <select class="dropdown btn btn-secondary" id="">
+                                <option value="0">Seleccionar Conexion</option>
+                                <option value="1">Conexion OLTP</option>
+                                <option value="2">Conexion OLAP</option>
+                            </select>
+                        </div>
+
+                        <div class="col mb-2">
+                            <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-command-5" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-command-5">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Data Conversion</div>
+                    <div class="card-body">
+
+                        <div id="div-campos-conversion-5"></div>
+
+                        <div id="div-num-campos-5" class="d-none"></div>
+
+                        <div id="div-tabla" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-conversion-5">Go</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedor-azul">
+
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">OLEDB Destination</div>
+                    <div class="card-body">
+                      
+                        <div id="contenido-destino">
+
+                            <div id="div-select-tabla-destino-5" class="col mb-4">
+                                <select name="tablas-destino-5" id="selec-tabla-destino" class="dropdown btn btn-secondary">
+                                    <option value="0">Seleccionar Tabla</option>
+                                </select>
+                            </div>
+    
+                        </div> 
+
+                        <div id="div-todo-destination-5" class="d-none"></div>
+
+                        <button class="btn btn-light ml-3 mt-3" id="btn-destination-5">Go</button>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            </div>
+            <!--Fin ETL-5-->
 
         </div>
 
@@ -177,6 +626,10 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/controlador.js"></script>
+    <script src="js/controlador2.js"></script>
+    <script src="js/controlador3.js"></script>
+    <script src="js/controlador4.js"></script>
+    <script src="js/controlador5.js"></script>
     
 </body>
 

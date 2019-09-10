@@ -67,9 +67,6 @@
         case "''":
         break;
 
-        case "''":
-        break;
-
     }
 
 ?>
