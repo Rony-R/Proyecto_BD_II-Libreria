@@ -1,9 +1,9 @@
 
-var tablaUsar2 = '';
+var tablaUsar = '';
 
-var campTab = new Array();
+var camposTabla = new Array();
 
-var campTab2 = new Array();
+var camposTabla2 = new Array();
 
 var conversionesCampo = new Array();
 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 });
 
-$("#select-origen-5").change(function(){
+$("#select-origen").change(function(){
 
     $.ajax({
         url: "ajax/api.php?accion='traer-tablas-oltp'",
@@ -31,7 +31,7 @@ $("#select-origen-5").change(function(){
 
             for(var i=0; i<respuesta.length; i++)
             {
-                $('select[id=selec-tabla-5]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
+                $('select[id=selec-tabla-1]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
             }
 
         },
@@ -41,34 +41,34 @@ $("#select-origen-5").change(function(){
         }
     });
 
-    if($('select[id=select-origen-5]').val() == 1)
+    if($('select[id=select-origen]').val() == 1)
     {
-        $("#div-select-tabla-5").removeClass("d-none");
-        $("#div-select-tabla-5").addClass("d-block");
-        $("#div-txta-sql-5").removeClass("d-block");
-        $("#div-txta-sql-5").addClass("d-none");
-        $("#chk-campos-5").removeClass("d-none");
-        $("#chk-campos-5").addClass("d-block");
+        $("#div-select-tabla-1").removeClass("d-none");
+        $("#div-select-tabla-1").addClass("d-block");
+        $("#div-txta-sql-1").removeClass("d-block");
+        $("#div-txta-sql-1").addClass("d-none");
+        $("#chk-campos-1").removeClass("d-none");
+        $("#chk-campos-1").addClass("d-block");
     }
     else
     {
-        $("#div-txta-sql-5").removeClass("d-none");
-        $("#div-txta-sql-5").addClass("d-block");
-        $("#div-select-tabla-5").removeClass("d-block");
-        $("#div-select-tabla-5").addClass("d-none");
-        $("#chk-campos-5").removeClass("d-block");
-        $("#chk-campos-5").addClass("d-none");
+        $("#div-txta-sql-1").removeClass("d-none");
+        $("#div-txta-sql-1").addClass("d-block");
+        $("#div-select-tabla-1").removeClass("d-block");
+        $("#div-select-tabla-1").addClass("d-none");
+        $("#chk-campos-1").removeClass("d-block");
+        $("#chk-campos-1").addClass("d-none");
     }
 
 });
 
-$("#selec-tabla-5").change(function(){
+$("#selec-tabla-1").change(function(){
 
-    $("#form-chk-5").html('');
+    $("#form-chk-1").html('');
 
-    var tabla = "tabla=" + $('select[id=selec-tabla-5]').val();
+    var tabla = "tabla=" + $('select[id=selec-tabla-1]').val();
 
-    tablaUsar2 = $('select[id=selec-tabla-5]').val();
+    tablaUsar = $('select[id=selec-tabla-1]').val();
 
     $.ajax({
         url: "ajax/api.php?accion='traer-campos-tablas'",
@@ -79,7 +79,7 @@ $("#selec-tabla-5").change(function(){
 
             for(var i=0; i<respuesta.length; i++)
             {
-                $("#form-chk-5").append('<input type="checkbox" id="chk-etl-5" name="campo-tabla" value="'+respuesta[i].COLUMN_NAME+'">'+respuesta[i].COLUMN_NAME+'<br>');
+                $("#form-chk-1").append('<input type="checkbox" id="chk-etl-1" name="campo-tabla" value="'+respuesta[i].COLUMN_NAME+'">'+respuesta[i].COLUMN_NAME+'<br>');
             }
 
         },
@@ -89,13 +89,13 @@ $("#selec-tabla-5").change(function(){
         }
     });
 
-    $("#tabla-5").html("ETL "+$('select[id=selec-tabla-5]').val());
+    $("#tabla-1").html("ETL "+$('select[id=selec-tabla-1]').val());
 
 });
 
-$("#btn-source-5").click(function(){
+$("#btn-source-1").click(function(){
 
-    tablaUsar2 = $('select[id=selec-tabla-5]').val();
+    tablaUsar = $('select[id=selec-tabla-1]').val();
 
     var datosSource = '';
     var datosSource2 = '';
@@ -103,22 +103,22 @@ $("#btn-source-5").click(function(){
     var posicion = 0;
     var i = 0;
 
-    if($('select[id=select-origen-5]').val() == 1)
+    if($('select[id=select-origen]').val() == 1)
     {
-        $('input:checkbox[id=chk-etl-5]:checked').each(function(){
+        $('input:checkbox[id=chk-etl-1]:checked').each(function(){
             if(this.checked)
             {
-                campTab[i] = $(this).val();
+                camposTabla[i] = $(this).val();
                 i = i+1;
             }
         });
 
-        for(var i=0; i<campTab.length; i++)
+        for(var i=0; i<camposTabla.length; i++)
         {
-            $("#div-campos-conversion-5").append(
+            $("#div-campos-conversion-1").append(
                 '<div class="col ml-3">'+
     
-                '<label class="row mt-4" for=""><b>'+campTab[i]+'</b></label>'+
+                '<label class="row mt-4" for=""><b>'+camposTabla[i]+'</b></label>'+
     
                 '<div class="col">'+
     
@@ -139,23 +139,23 @@ $("#btn-source-5").click(function(){
             '</div>'
             );
 
-            /*$("#chk-concat-5").append(
-                '<input type="checkbox" id=""> '+campTab[i]+' <br>'
+            /*$("#chk-concat-1").append(
+                '<input type="checkbox" id=""> '+camposTabla[i]+' <br>'
             );*/
 
         }
 
-        console.log("DATOS CONTRONALOR5");
+        console.log("DATOS CONTRONALOR1");
 
-        console.log("La tabla es: " +tablaUsar2);
+        console.log("La tabla es: " +tablaUsar);
         console.log("Los campos son: ");
-        for(var i=0; i<campTab.length; i++)
-            console.log(campTab[i]);
+        for(var i=0; i<camposTabla.length; i++)
+            console.log(camposTabla[i]);
 
     }
     else
     {
-        datosSource = $("#sql-txta-source-5").val();
+        datosSource = $("#sql-txta-source-1").val();
 
         datosSource2 = datosSource.substring(7);
 
@@ -163,14 +163,14 @@ $("#btn-source-5").click(function(){
 
         datosSource3 = datosSource2.substring(0, posicion);
 
-        campTab2 = datosSource3.split(",");
+        camposTabla2 = datosSource3.split(",");
 
-        for(var i=0; i<campTab2.length; i++)
+        for(var i=0; i<camposTabla2.length; i++)
         {
-            $("#div-campos-conversion-5").append(
+            $("#div-campos-conversion-1").append(
                 '<div class="col ml-3">'+
     
-                '<label class="row mt-4" for=""><b>'+campTab2[i]+'</b></label>'+
+                '<label class="row mt-4" for=""><b>'+camposTabla2[i]+'</b></label>'+
     
                 '<div class="col">'+
     
@@ -186,58 +186,58 @@ $("#btn-source-5").click(function(){
     
                     '<input type="radio" name="conver-campo-'+i+'" value="4"> Concatenacion'+
 
-                    //'<div class="ml-4" id="chk-concatenacion"></div>'+
+                    '<div class="ml-4" id="chk-concatenacion"></div>'+
 
                 '</div>'+
     
             '</div>'
             );
 
-            /*$("#chk-concatenacion").append(
-                '<input type="checkbox" id=""> '+campTab2[i]+' <br>'
-            );*/
+            $("#chk-concatenacion").append(
+                '<input type="checkbox" id=""> '+camposTabla2[i]+' <br>'
+            );
 
         }
 
         var posicion2 = datosSource.indexOf("FROM");
 
-        tablaUsar2 = datosSource.substring(posicion2+5, datosSource.length);
+        tablaUsar = datosSource.substring(posicion2 +5, datosSource.length);
 
-        console.log("DATOS CONTRONALOR5");
+        console.log("DATOS CONTRONALOR1");
 
-        $("#tabla-5").html("ETL "+tablaUsar2);
+        $("#tabla-1").html("ETL "+tablaUsar);
 
-        console.log("La tabla es: " +tablaUsar2);
+        console.log("La tabla es: " +tablaUsar);
         console.log("Los campos son: ");
-        for(var i=0; i<campTab2.length; i++)
-            console.log(campTab2[i]);
+        for(var i=0; i<camposTabla2.length; i++)
+            console.log(camposTabla2[i]);
 
     }
 
 });
 
-$("#btn-conversion-5").click(function(){
+$("#btn-conversion-1").click(function(){
 
-    if($('select[id=select-origen-5]').val() == 1)
+    if($('select[id=select-origen]').val() == 1)
     {
-        for(var i=0; i<campTab.length; i++)
+        for(var i=0; i<camposTabla.length; i++)
         {
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
         
         console.log("Las conversiones son: ");
-        for(var i=0; i<campTab.length; i++)
+        for(var i=0; i<camposTabla.length; i++)
             console.log(conversionesCampo[i]);
     }
     else
     {
-        for(var i=0; i<campTab2.length; i++)
+        for(var i=0; i<camposTabla2.length; i++)
         {
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
 
         console.log("Las conversiones son: ");
-        for(var i=0; i<campTab2.length; i++)
+        for(var i=0; i<camposTabla2.length; i++)
             console.log(conversionesCampo[i]);
     }
 
@@ -249,7 +249,7 @@ $("#btn-conversion-5").click(function(){
     
             for(var i=0; i<respuesta.length; i++)
             {
-                $('select[id=selec-tabla-destino-5]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
+                $('select[id=selec-tabla-destino-1]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
             }
     
         },
