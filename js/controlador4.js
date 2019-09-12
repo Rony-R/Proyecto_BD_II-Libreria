@@ -7,6 +7,10 @@ var campTab2 = new Array();
 
 var conversionesCampo = new Array();
 
+var conversionesFecha = new Array();
+
+var fechConver = 'fech-conver-4';
+
 $(document).ready(function(){
 
     $.ajax({
@@ -127,9 +131,9 @@ $("#btn-source-4").click(function(){
                     '<input type="radio" name="conver-campo-'+i+'" value="3"> Fecha <br>'+
     
                     '<div class="ml-4" id="chk-fecha">'+
-                        '<input type="checkbox" name="fech1" id=""> Dia <br>'+
-                        '<input type="checkbox" name="fech1" id=""> Mes <br>'+
-                        '<input type="checkbox" name="fech1" id=""> Año'+
+                        '<input type="checkbox" value="1" id="fech-conver-4"> Dia <br>'+
+                        '<input type="checkbox" value="2" id="fech-conver-4"> Mes <br>'+
+                        '<input type="checkbox" value="3" id="fech-conver-4"> Año'+
                     '</div>'+
     
                     '<input type="radio" name="conver-campo-'+i+'" value="4"> Concatenacion'+
@@ -179,9 +183,9 @@ $("#btn-source-4").click(function(){
                     '<input type="radio" name="conver-campo-'+i+'" value="3"> Fecha <br>'+
     
                     '<div class="ml-4" id="chk-fecha">'+
-                        '<input type="checkbox" id=""> Dia <br>'+
-                        '<input type="checkbox" id=""> Mes <br>'+
-                        '<input type="checkbox" id=""> Año'+
+                        '<input type="checkbox" value="1" id="fech-conver-4"> Dia <br>'+
+                        '<input type="checkbox" value="2" id="fech-conver-4"> Mes <br>'+
+                        '<input type="checkbox" value="3" id="fech-conver-4"> Año'+
                     '</div>'+
     
                     '<input type="radio" name="conver-campo-'+i+'" value="4"> Concatenacion'+
@@ -222,23 +226,33 @@ $("#btn-conversion-4").click(function(){
     {
         for(var i=0; i<campTab.length; i++)
         {
+            converFecha(fechConver);
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
         
         console.log("Las conversiones son: ");
         for(var i=0; i<campTab.length; i++)
             console.log(conversionesCampo[i]);
+        
+        console.log("Las conversiones  de fecha son: ");
+        for(var i=0; i<conversionesFecha.length; i++)
+            console.log(conversionesFecha[i]);
     }
     else
     {
         for(var i=0; i<campTab2.length; i++)
         {
+            converFecha(fechConver);
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
 
         console.log("Las conversiones son: ");
         for(var i=0; i<campTab2.length; i++)
             console.log(conversionesCampo[i]);
+
+        console.log("Las conversiones  de fecha son: ");
+        for(var i=0; i<conversionesFecha.length; i++)
+            console.log(conversionesFecha[i]);
     }
 
     $.ajax({
@@ -260,3 +274,16 @@ $("#btn-conversion-4").click(function(){
     });
 
 });
+
+function converFecha(idChk){
+
+    var i = 0;
+
+    $('input:checkbox[id='+idChk+']:checked').each(function(){
+        if(this.checked)
+        {
+            conversionesFecha[i] = $(this).val();
+            i = i+1;
+        }
+    });
+}
