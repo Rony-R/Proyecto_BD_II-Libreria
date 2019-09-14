@@ -11,7 +11,9 @@ var conversionesFecha = new Array();
 
 var fechConver = 'fech-conver-1';
 
-var strconcat = '';
+var strconcat1 = '';
+
+var strconcat2 = '';
 
 $(document).ready(function(){
 
@@ -236,10 +238,13 @@ $("#btn-conversion-1").click(function(){
         {
             if($('input:radio[name=conver-campo-'+i+']:checked').val() == 4)
             {
-                strconcat = camposTabla[i] + ":" + $('select[id=select-concat-'+i+']').val();
+                //strconcat = camposTabla[i] + ":" + $('select[id=select-concat-'+i+']').val();
+                strconcat1 = camposTabla[i];
+                strconcat2 = $('select[id=select-concat-'+i+']').val();
             }
             converFecha('fech-conver-1-'+i);
-            conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
+            //conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
+            conversionesCampo[i] = i+ '&' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
         
         console.log("Las conversiones son: ");
@@ -250,7 +255,7 @@ $("#btn-conversion-1").click(function(){
         for(var i=0; i<conversionesFecha.length; i++)
             console.log(conversionesFecha[i]);
 
-        console.log("Los campos a concatenar son: " + strconcat);
+        //console.log("Los campos a concatenar son: " + strconcat);
     }
     else
     {
@@ -258,10 +263,13 @@ $("#btn-conversion-1").click(function(){
         {
             if($('input:radio[name=conver-campo-'+i+']:checked').val() == 4)
             {
-                strconcat = camposTabla2[i] + ":" + $('select[id=select-concat-1-'+i+']').val();
+                //strconcat = camposTabla2[i] + ":" + $('select[id=select-concat-1-'+i+']').val();
+                strconcat1 = camposTabla2[i];
+                strconcat2 = $('select[id=select-concat-1-'+i+']').val();
             }
             converFecha('fech-conver-1-'+i);
-            conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
+            //conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
+            conversionesCampo[i] = i+ '&' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
 
         console.log("Las conversiones son: ");
@@ -272,7 +280,7 @@ $("#btn-conversion-1").click(function(){
         for(var i=0; i<conversionesFecha.length; i++)
             console.log(conversionesFecha[i]);
 
-        console.log("Los campos a concatenar son: " + strconcat);
+        //console.log("Los campos a concatenar son: " + strconcat);
     }
 
     $.ajax({
@@ -331,5 +339,157 @@ function concatCampos12(idDiv){
 }
 
 $("#btn-destination-1").click(function(){
+
+    var sqlFinal = 'SELECT ';
+    var sepConver = new Array();
+    var strComillas = "' '";
+    var camposConvertidos = new Array();
+    var camposConvertidos2 = '';
     
+    if($('select[id=select-origen]').val() == 1)
+    {
+        for(var i=0; i<camposTabla.length; i++)
+        {
+            sepConver[i] = conversionesCampo[i].split('&');
+        }
+
+        console.log('Resultado sepConver: ');
+        for(var i=0; i<sepConver.length; i++)
+        {
+            console.log(sepConver[i]);
+            if(sepConver[i] == i+',undefined')
+            {
+                if(camposTabla[i]+',undefined' == strconcat1+',undefined' || camposTabla[i]+',undefined'== strconcat2+',undefined')
+                {
+                    camposConvertidos[i] = '*';
+                }
+                else
+                {
+                    camposConvertidos[i] = camposTabla[i];
+                }
+            }
+            else
+            {
+                if(sepConver[i] == i+',1')
+                {
+                    if(camposTabla[i]+',1' == strconcat1+',1' || camposTabla[i]+',1'== strconcat2+',1')
+                    {
+                        camposConvertidos[i] = '*';
+                    }
+                    else
+                    {
+                        camposConvertidos[i] = 'LOWER('+camposTabla[i]+')';
+                    }
+                }
+                else
+                {
+                    if(sepConver[i] == i+',2')
+                    {
+                        if(camposTabla[i]+',2' == strconcat1+',2' || camposTabla[i]+',2' == strconcat2+',2')
+                        {
+                            camposConvertidos[i] = '*';
+                        }
+                        else
+                        {
+                            camposConvertidos[i] = 'UPPER('+camposTabla[i]+')';
+                        }
+                    }
+                    else
+                    {
+                        if(sepConver[i] == i+',3')
+                        {
+                            //ESTO ES PARA LA PARTE DE FECHA
+                            //if(converFecha[])
+                            //camposConvertidos[i] = 
+                        }
+                        else
+                        {
+                            camposConvertidos[i] = 'CONCAT('+strconcat1+','+strComillas+','+strconcat2+')';
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    else
+    {
+        for(var i=0; i<camposTabla2.length; i++)
+        {
+            sepConver[i] = conversionesCampo[i].split('&');
+        }
+
+        console.log('Resultado sepConver: ');
+        for(var i=0; i<sepConver.length; i++)
+        {
+            console.log(sepConver[i]);
+            if(sepConver[i] == i+',undefined')
+            {
+                if(camposTabla2[i]+',undefined' == strconcat1+',undefined' || camposTabla2[i]+',undefined'== strconcat2+',undefined')
+                {
+                    camposConvertidos[i] = '*';
+                }
+                else
+                {
+                    camposConvertidos[i] = camposTabla2[i];
+                }
+            }
+            else
+            {
+                if(sepConver[i] == i+',1')
+                {
+                    if(camposTabla2[i]+',1' == strconcat1+',1' || camposTabla2[i]+',1'== strconcat2+',1')
+                    {
+                        camposConvertidos[i] = '*';
+                    }
+                    else
+                    {
+                        camposConvertidos[i] = 'LOWER('+camposTabla2[i]+')';
+                    }
+                }
+                else
+                {
+                    if(sepConver[i] == i+',2')
+                    {
+                        if(camposTabla2[i]+',2' == strconcat1+',2' || camposTabla2[i]+',2' == strconcat2+',2')
+                        {
+                            camposConvertidos[i] = '*';
+                        }
+                        else
+                        {
+                            camposConvertidos[i] = 'UPPER('+camposTabla2[i]+')';
+                        }
+                    }
+                    else
+                    {
+                        if(sepConver[i] == i+',3')
+                        {
+                            //ESTO ES PARA LA PARTE DE FECHA
+                            //if(converFecha[])
+                            //camposConvertidos[i] = 
+                        }
+                        else
+                        {
+                            camposConvertidos[i] = 'CONCAT('+strconcat1+','+strComillas+','+strconcat2+')';
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    console.log('Resultado camposConvertidos: ');
+    for(var i=0; i<camposConvertidos.length; i++)
+    {
+        if(camposConvertidos[i] != '*')
+            camposConvertidos2 = camposConvertidos2+','+ camposConvertidos[i];
+    }
+    console.log(camposConvertidos2);
+
+    sqlFinal = sqlFinal + camposConvertidos2.substring(1, camposConvertidos2.length) + ' FROM ' + tablaUsar;
+
+    console.log("La consulta definitiva es: " +sqlFinal);
+
 });
