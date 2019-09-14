@@ -43,7 +43,12 @@
 
         break;
 
-        case "''":
+        case "'ejecutarSqlDefinitiva'":
+
+            $consulta = new sql($con_oltp, $con_olap);
+
+            echo $consulta->ejecucionFinal($con_oltp,$_GET["sql"]);
+
         break;
 
         case "''":

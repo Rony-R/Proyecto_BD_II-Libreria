@@ -398,9 +398,25 @@ $("#btn-destination-1").click(function(){
                     {
                         if(sepConver[i] == i+',3')
                         {
-                            //ESTO ES PARA LA PARTE DE FECHA
-                            //if(converFecha[])
-                            //camposConvertidos[i] = 
+                            for(var j=0; j<conversionesFecha.length; j++)
+                            {
+                                if(conversionesFecha[j] == ',undefined')
+                                {
+                                    camposConvertidos[i] = '*';
+                                }
+                                else
+                                {
+                                    if(conversionesFecha[j] == 1)
+                                        camposConvertidos[i] = 'EXTRACT(DAY FROM '+camposTabla[i]+') AS DIA';
+                                    else
+                                    {
+                                        if(conversionesFecha[j] == 2)
+                                            camposConvertidos[i+1] = 'EXTRACT(MONTH FROM '+camposTabla[i]+') AS MES';
+                                        else
+                                            camposConvertidos[i+2] = 'EXTRACT(YEAR FROM '+camposTabla[i]+') AS AÑO';
+                                    }
+                                }
+                            } 
                         }
                         else
                         {
@@ -464,9 +480,25 @@ $("#btn-destination-1").click(function(){
                     {
                         if(sepConver[i] == i+',3')
                         {
-                            //ESTO ES PARA LA PARTE DE FECHA
-                            //if(converFecha[])
-                            //camposConvertidos[i] = 
+                            for(var j=0; j<conversionesFecha.length; j++)
+                            {
+                                if(conversionesFecha[j] == ',undefined')
+                                {
+                                    camposConvertidos[i] = '*';
+                                }
+                                else
+                                {
+                                    if(conversionesFecha[j] == 1)
+                                        camposConvertidos[i] = 'EXTRACT(DAY FROM '+camposTabla2[i]+') AS DIA';
+                                    else
+                                    {
+                                        if(conversionesFecha[j] == 2)
+                                            camposConvertidos[i+1] = 'EXTRACT(MONTH FROM '+camposTabla2[i]+') AS MES';
+                                        else
+                                            camposConvertidos[i+2] = 'EXTRACT(YEAR FROM '+camposTabla2[i]+') AS AÑO';
+                                    }
+                                }
+                            }
                         }
                         else
                         {
@@ -483,7 +515,7 @@ $("#btn-destination-1").click(function(){
     console.log('Resultado camposConvertidos: ');
     for(var i=0; i<camposConvertidos.length; i++)
     {
-        if(camposConvertidos[i] != '*')
+        if(camposConvertidos[i] != '*' && camposConvertidos[i] != 'undefined')
             camposConvertidos2 = camposConvertidos2+','+ camposConvertidos[i];
     }
     console.log(camposConvertidos2);
@@ -493,3 +525,45 @@ $("#btn-destination-1").click(function(){
     console.log("La consulta definitiva es: " +sqlFinal);
 
 });
+
+$("#btn-sig-etl1").click(function(){
+    window.location = "etl2.html";
+});
+
+$("#btn-sig-etl2").click(function(){
+    window.location = "etl3.html";
+});
+
+$("#btn-sig-etl3").click(function(){
+    window.location = "etl4.html";
+});
+
+$("#btn-sig-etl4").click(function(){
+    window.location = "etl5.html";
+});
+
+$("#btn-sig-etl5").click(function(){
+    window.location = "";
+});
+
+function ejecutarSql(consulta){
+
+    var sql = "sql=" + consulta;
+
+    $.ajax({
+        url: "ajax/api.php?accion='ejecutarSqlDefinitiva'",
+        data: sql,
+        dataType: "json",
+        method: "GET",
+        success: function(respuesta){
+            
+
+
+        },
+        error: function(e){
+            console.log(e);
+            console.log("Ocurrio un error en: ejecutarSqlDefinitiva");
+        }
+    });
+
+}

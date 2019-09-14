@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ETL</title>
+
+    <link href="css/all.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="contenedor-principal">
+
+        <div id="fila-principal" class="row mt-5 mb-5">
+
+            <div class="col-lg-3"></div>
+
+            <!--Inicio ETL-1-->
+            <div id="col-etl-1" class="col-lg-6">
+
+                <h2 id="tabla-1" class="h2-tabla"></h1>
+
+                <div class="contenedor-azul mb-2">
+
+                    <div class="card text-white bg-primary">
+                        <div class="card-header">Data Source</div>
+                        <div id="body-data-source" class="card-body">
+
+                            <div class="col mb-4">
+                                <select class="dropdown btn btn-secondary" id="select-origen">
+                                    <option value="0">Seleccionar Origen</option>
+                                    <option value="1">Tabla</option>
+                                    <option value="2">Consulta</option>
+                                </select>
+                            </div>
+
+                            <div id="contenido-origen">
+
+                                <div id="div-select-tabla-1" class="col mb-4 d-none">
+                                    <select id="selec-tabla-1" class="dropdown btn btn-secondary">
+                                        <option value="0">Seleccionar Tabla</option>
+                                    </select>
+                                </div>
+
+                                <div id="div-txta-sql-1" class="col mb-2 d-none">
+                                    <textarea class="form-control text-input" placeholder="Ingrese la consulta sql:" name="" id="sql-txta-source-1" cols="30" rows="10"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div id="chk-campos-1" class="col d-none">
+                                <label for="">Campos de la tabla</label> <br>
+                                <form id="form-chk-1"></form>
+                            </div>
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-source-1">Go</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contenedor-azul">
+
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Data Conversion</div>
+                        <div class="card-body">
+
+                            <div id="div-campos-conversion-1"></div>
+
+                            <div id="chk-concat-1"></div>
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-conversion-1">Go</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contenedor-azul">
+
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">OLEDB Destination</div>
+                        <div class="card-body">
+                        
+                            <div id="contenido-destino">
+
+                                <div id="div-select-tabla-destino" class="col mb-4">
+                                    <select id="selec-tabla-destino-1" class="dropdown btn btn-secondary">
+                                        <option value="0">Seleccionar Tabla</option>
+                                    </select>
+                                </div>
+        
+                            </div> 
+
+                            <button class="btn btn-light ml-3 mt-3" id="btn-destination-1">Go</button>
+
+                        </div>
+                    </div>
+        
+                </div>
+
+                <button id="btn-sig-etl4" class="btn btn-lg btn-danger ml-4">Siguiente ETL</button>
+
+            </div>
+            <!--Fin ETL-1-->
+
+            <div class="col-lg-3"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/controlador1.js"></script>
+    
+</body>
+
+</html>

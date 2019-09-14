@@ -49,5 +49,14 @@
 
 		}
 
+		public function ejecucionFinal($conexion, $sql)
+		{
+			$resultado = array();
+
+			$resultado = $conexion->obtenerFila2($sql);
+
+			return json_encode($resultado);
+		}
+
 	}
 ?>
