@@ -7,9 +7,11 @@ var campTab2 = new Array();
 
 var conversionesCampo = new Array();
 
-var conversionesFecha = new Array();
+var conversionesFecha2 = new Array();
 
 var fechConver = 'fech-conver-2';
+
+var strconcat2 = '';
 
 $(document).ready(function(){
 
@@ -131,21 +133,25 @@ $("#btn-source-2").click(function(){
                     '<input type="radio" name="conver-campo-'+i+'" value="3"> Fecha <br>'+
     
                     '<div class="ml-4" id="chk-fecha">'+
-                        '<input type="checkbox" value="1" id="fech-conver-2"> Dia <br>'+
-                        '<input type="checkbox" value="2" id="fech-conver-2"> Mes <br>'+
-                        '<input type="checkbox" value="3" id="fech-conver-2"> Año'+
+                        '<input type="checkbox" value="1" id="fech-conver-2-'+i+'"> Dia <br>'+
+                        '<input type="checkbox" value="2" id="fech-conver-2-'+i+'"> Mes <br>'+
+                        '<input type="checkbox" value="3" id="fech-conver-2-'+i+'"> Año'+
                     '</div>'+
     
                     '<input type="radio" name="conver-campo-'+i+'" value="4"> Concatenacion'+
+
+                    '<div id="div-concatenaciones-2-'+i+'">'+
+                        '<select id="select-concat-2-'+i+'" class="dropdown btn btn-secondary">'+
+                            '<option value="0">Seleccionar Campo</option>'+
+                        '</select>'+
+                    '</div>'+
     
                 '</div>'+
     
             '</div>'
             );
 
-            /*$("#chk-concat-2").append(
-                '<input type="checkbox" id=""> '+campTab[i]+' <br>'
-            );*/
+            concatCampos21('select-concat-2-'+i);
 
         }
 
@@ -183,23 +189,25 @@ $("#btn-source-2").click(function(){
                     '<input type="radio" name="conver-campo-'+i+'" value="3"> Fecha <br>'+
     
                     '<div class="ml-4" id="chk-fecha">'+
-                        '<input type="checkbox" value="1" id="fech-conver-2"> Dia <br>'+
-                        '<input type="checkbox" value="2" id="fech-conver-2"> Mes <br>'+
-                        '<input type="checkbox" value="3" id="fech-conver-2"> Año'+
+                        '<input type="checkbox" value="1" id="fech-conver-2-'+i+'"> Dia <br>'+
+                        '<input type="checkbox" value="2" id="fech-conver-2-'+i+'"> Mes <br>'+
+                        '<input type="checkbox" value="3" id="fech-conver-2-'+i+'"> Año'+
                     '</div>'+
     
                     '<input type="radio" name="conver-campo-'+i+'" value="4"> Concatenacion'+
 
-                    //'<div class="ml-4" id="chk-concatenacion"></div>'+
+                    '<div id="div-concatenaciones-2-'+i+'">'+
+                        '<select id="select-concat-2-'+i+'" class="dropdown btn btn-secondary">'+
+                            '<option value="0">Seleccionar Campo</option>'+
+                        '</select>'+
+                    '</div>'+
 
                 '</div>'+
     
             '</div>'
             );
 
-            /*$("#chk-concatenacion").append(
-                '<input type="checkbox" id=""> '+campTab2[i]+' <br>'
-            );*/
+            concatCampos22('select-concat-2-'+i);
 
         }
 
@@ -226,7 +234,11 @@ $("#btn-conversion-2").click(function(){
     {
         for(var i=0; i<campTab.length; i++)
         {
-            converFecha(fechConver);
+            if($('input:radio[name=conver-campo-'+i+']:checked').val() == 4)
+            {
+                strconcat2 = campTab[i] + ":" + $('select[id=select-concat-2-'+i+']').val();
+            }
+            converFecha2('fech-conver-2-'+i);
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
         
@@ -235,14 +247,20 @@ $("#btn-conversion-2").click(function(){
             console.log(conversionesCampo[i]);
         
         console.log("Las conversiones  de fecha son: ");
-        for(var i=0; i<conversionesFecha.length; i++)
-            console.log(conversionesFecha[i]);
+        for(var i=0; i<conversionesFecha2.length; i++)
+            console.log(conversionesFecha2[i]);
+
+        console.log("Los campos a concatenar son: " + strconcat2);
     }
     else
     {
         for(var i=0; i<campTab2.length; i++)
         {
-            converFecha(fechConver);
+            if($('input:radio[name=conver-campo-'+i+']:checked').val() == 4)
+            {
+                strconcat2 = campTab2[i] + ":" + $('select[id=select-concat-2-'+i+']').val();
+            }
+            converFecha2('fech-conver-2-'+i);
             conversionesCampo[i] = 'campo='+i+ '&conversion=' + $('input:radio[name=conver-campo-'+i+']:checked').val();
         }
 
@@ -251,8 +269,10 @@ $("#btn-conversion-2").click(function(){
             console.log(conversionesCampo[i]);
             
         console.log("Las conversiones  de fecha son: ");
-        for(var i=0; i<conversionesFecha.length; i++)
-            console.log(conversionesFecha[i]);
+        for(var i=0; i<conversionesFecha2.length; i++)
+            console.log(conversionesFecha2[i]);
+
+        console.log("Los campos a concatenar son: " + strconcat2);
     }
 
     $.ajax({
@@ -275,15 +295,37 @@ $("#btn-conversion-2").click(function(){
 
 });
 
-function converFecha(idChk){
+function converFecha2(idChk){
 
     var i = 0;
 
     $('input:checkbox[id='+idChk+']:checked').each(function(){
         if(this.checked)
         {
-            conversionesFecha[i] = $(this).val();
+            conversionesFecha2[i] = $(this).val();
             i = i+1;
         }
     });
+}
+
+function concatCampos21(idDiv){
+
+    for(var i=0; i<campTab.length; i++)
+    {
+        $("#"+idDiv).append(
+            '<option value="'+campTab[i]+'">'+campTab[i]+'</option>'
+        );
+    }
+
+}
+
+function concatCampos22(idDiv){
+
+    for(var i=0; i<campTab2.length; i++)
+    {
+        $("#"+idDiv).append(
+            '<option value="'+campTab2[i]+'">'+campTab2[i]+'</option>'
+        );
+    }
+
 }
