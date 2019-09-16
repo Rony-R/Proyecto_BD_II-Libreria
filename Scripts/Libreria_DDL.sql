@@ -31,7 +31,8 @@ CREATE TABLE tbl_cargos_x_empleado (
 
 CREATE TABLE tbl_categorias (
     id_categoria   INTEGER NOT NULL,
-    descripcion    VARCHAR2(150) NOT NULL
+    descripcion    VARCHAR2(150) NOT NULL,
+    fecha_insert   DATE NOT NULL
 );
 
 ALTER TABLE tbl_categorias ADD CONSTRAINT tbl_categorias_pk PRIMARY KEY ( id_categoria );
@@ -74,9 +75,10 @@ CREATE TABLE tbl_editoriales (
 ALTER TABLE tbl_editoriales ADD CONSTRAINT tbl_editoriales_pk PRIMARY KEY ( id_editorial );
 
 CREATE TABLE tbl_empleados (
-    id_empleado   INTEGER NOT NULL,
-    id_persona    INTEGER NOT NULL,
-    id_jefe       INTEGER
+    id_empleado    INTEGER NOT NULL,
+    id_persona     INTEGER NOT NULL,
+    id_jefe        INTEGER,
+    fecha_insert   DATE NOT NULL
 );
 
 ALTER TABLE tbl_empleados ADD CONSTRAINT tbl_empleados_pk PRIMARY KEY ( id_empleado );
@@ -106,14 +108,16 @@ CREATE TABLE tbl_facturas (
     impuesto              NUMBER(6, 2),
     total_a_pagar         NUMBER(6, 2),
     pago_cliente          INTEGER,
-    cambio_cliente        NUMBER(6, 2)
+    cambio_cliente        NUMBER(6, 2),
+    fecha_insert          DATE NOT NULL
 );
 
 ALTER TABLE tbl_facturas ADD CONSTRAINT tbl_facturas_pk PRIMARY KEY ( id_factura );
 
 CREATE TABLE tbl_generos (
     id_genero       INTEGER NOT NULL,
-    nombre_genero   VARCHAR2(100) NOT NULL
+    nombre_genero   VARCHAR2(100) NOT NULL,
+    fecha_insert    DATE NOT NULL
 );
 
 ALTER TABLE tbl_generos ADD CONSTRAINT tbl_generos_pk PRIMARY KEY ( id_genero );
@@ -139,7 +143,8 @@ CREATE TABLE tbl_librerias (
     nombre_libreria   VARCHAR2(100) NOT NULL,
     direccion         VARCHAR2(150) NOT NULL,
     telefono          VARCHAR2(50) NOT NULL,
-    rtn               VARCHAR2(100) NOT NULL
+    rtn               VARCHAR2(100) NOT NULL,
+    fecha_insert      DATE NOT NULL
 );
 
 ALTER TABLE tbl_librerias ADD CONSTRAINT tbl_librerias_pk PRIMARY KEY ( id_libreria );
@@ -149,7 +154,8 @@ CREATE TABLE tbl_libros (
     id_idioma           INTEGER NOT NULL,
     id_categoria        INTEGER NOT NULL,
     nombre_libro        VARCHAR2(100) NOT NULL,
-    fecha_publicacion   DATE NOT NULL
+    fecha_publicacion   DATE NOT NULL,
+    fecha_insert        DATE NOT NULL
 );
 
 ALTER TABLE tbl_libros ADD CONSTRAINT tbl_libros_pk PRIMARY KEY ( id_libro );
@@ -176,7 +182,8 @@ CREATE TABLE tbl_mora (
     dias_retraso   INTEGER NOT NULL,
     monto_mora     INTEGER NOT NULL,
     descripcion    VARCHAR2(100) NOT NULL,
-    tarifa_x_dia   INTEGER NOT NULL
+    tarifa_x_dia   INTEGER NOT NULL,
+    fecha_insert   DATE NOT NULL
 );
 
 ALTER TABLE tbl_mora ADD CONSTRAINT tbl_mora_pk PRIMARY KEY ( id_mora );
@@ -200,11 +207,12 @@ CREATE TABLE tbl_pasillos (
 ALTER TABLE tbl_pasillos ADD CONSTRAINT tbl_pasillos_pk PRIMARY KEY ( id_pasillo );
 
 CREATE TABLE tbl_personas (
-    id_persona   INTEGER NOT NULL,
-    nombre       VARCHAR2(100) NOT NULL,
-    apellido     VARCHAR2(100) NOT NULL,
-    correo       VARCHAR2(120),
-    telefono     VARCHAR2(50)
+    id_persona     INTEGER NOT NULL,
+    nombre         VARCHAR2(100) NOT NULL,
+    apellido       VARCHAR2(100) NOT NULL,
+    correo         VARCHAR2(120),
+    telefono       VARCHAR2(50),
+    fecha_insert   DATE NOT NULL
 );
 
 ALTER TABLE tbl_personas ADD CONSTRAINT tbl_personas_pk PRIMARY KEY ( id_persona );
@@ -213,7 +221,8 @@ CREATE TABLE tbl_prestamos_libro (
     id_prestamo    INTEGER NOT NULL,
     id_factura     INTEGER NOT NULL,
     fecha_inicio   DATE NOT NULL,
-    fecha_max      DATE NOT NULL
+    fecha_max      DATE NOT NULL,
+    fecha_insert   DATE NOT NULL
 );
 
 ALTER TABLE tbl_prestamos_libro ADD CONSTRAINT tbl_prestamos_pk PRIMARY KEY ( id_prestamo );
@@ -252,7 +261,8 @@ CREATE TABLE tbl_sucursales (
     nombre_sucursal   VARCHAR2(100) NOT NULL,
     direccion         VARCHAR2(150) NOT NULL,
     rtn               VARCHAR2(50) NOT NULL,
-    telefono          VARCHAR2(50) NOT NULL
+    telefono          VARCHAR2(50) NOT NULL,
+    fecha_insert      DATE NOT NULL
 );
 
 ALTER TABLE tbl_sucursales ADD CONSTRAINT tbl_sucursales_pk PRIMARY KEY ( id_sucursal );

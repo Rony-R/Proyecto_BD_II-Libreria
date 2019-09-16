@@ -47,6 +47,16 @@
 <colAssociation fkAssociation="7E9ACB7D-76AF-C754-D52D-42B1D21ACE84" referredColumn="FE7B272E-B5FC-3E22-D352-CA0D68E05BC7"/>
 </associations>
 </Column>
+<Column name="FECHA_INSERT" id="8F1D6315-BE6F-5978-19B3-01350442A3A7">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-09-16 01:53:25 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="295752DD-CA06-6791-33E8-61134778D546" name="TBL_EMPLEADOS_PK">

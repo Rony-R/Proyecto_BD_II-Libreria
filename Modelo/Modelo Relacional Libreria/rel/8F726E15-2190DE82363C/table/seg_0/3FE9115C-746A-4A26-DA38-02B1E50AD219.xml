@@ -67,6 +67,16 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="FECHA_INSERT" id="1E8B0DDA-10BC-4CEC-CC21-F9A31D6AB12E">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-09-16 01:54:22 UTC</createdTime>
+<ownerDesignName>Modelo Relacional Libreria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9AAC6542-1321-30AE-45F0-57D9532D5762" name="TBL_LIBROS_PK">
