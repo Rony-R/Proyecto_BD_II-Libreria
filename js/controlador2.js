@@ -34,7 +34,7 @@ $(document).ready(function(){
 $("#select-origen").change(function(){
 
     $.ajax({
-        url: "ajax/api.php?accion='traer-tablas-oltp'",
+        url: "ajax/api.php?accion='traer-tablas-olap'",
         dataType: "json",
         method: "GET",
         success: function(respuesta){
@@ -81,7 +81,7 @@ $("#selec-tabla-1").change(function(){
     tablaUsar = $('select[id=selec-tabla-1]').val();
 
     $.ajax({
-        url: "ajax/api.php?accion='traer-campos-tablas'",
+        url: "ajax/api.php?accion='traer-campos-tablas2'",
         data: tabla,
         dataType: "json",
         method: "GET",
@@ -527,8 +527,6 @@ $("#btn-destination-1").click(function(){
 
     console.log("La consulta definitiva es: " +sqlFinal);
 
-    console.log("La tabla destino es: " + tablaDestino);
-
 });
 
 $("#btn-sig-etl1").click(function(){
@@ -548,7 +546,7 @@ $("#btn-sig-etl4").click(function(){
 });
 
 $("#btn-sig-etl5").click(function(){
-    window.location = "index.html";
+    window.location = "";
 });
 
 function ejecutarSql(consulta){
@@ -572,15 +570,3 @@ function ejecutarSql(consulta){
     });
 
 }
-
-$("#btn-dimension").click(function(){
-
-    window.location = "etl1.html";
-
-});
-
-$("#btn-hechos").click(function(){
-
-    window.location = "etlHechos.html";
-
-});

@@ -24,3 +24,22 @@ body{
 .text-input{
     font-size: 15px;
 }
+
+.red-card{
+    width: 500px !important;
+    height: 200px !important;
+}
+
+.flecha{
+    font-size: 80px;
+    color: white;
+    margin-left: 240px;
+    margin-bottom: 15px;
+}
+
+.btn-click{
+    margin-left: 130px;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+}

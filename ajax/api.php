@@ -51,22 +51,18 @@
 
         break;
 
-        case "''":
+        case "'traer-tablas-olap'":
+
+            $consulta = new sql($con_oltp, $con_olap);
+
+            echo $consulta->traerTablasBD($con_olap);
         break;
 
-        case "''":
-        break;
+        case "'traer-campos-tablas2'":
 
-        case "''":
-        break;
+            $consulta2 = new sql($con_oltp, $con_olap);
 
-        case "''":
-        break;
-
-        case "''":
-        break;
-
-        case "''":
+            echo $consulta2->traerCamposTabla($con_olap, $_GET["tabla"]);
         break;
 
         case "''":
