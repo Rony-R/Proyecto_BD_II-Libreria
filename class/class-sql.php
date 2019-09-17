@@ -70,5 +70,12 @@
 			return json_encode($resultado);
 		}
 
+		public function procedimientoSql($conexion, $exec)
+		{
+			$instruccion = $exec;
+
+			return $instruccion;
+		}
+
 	}
 ?>

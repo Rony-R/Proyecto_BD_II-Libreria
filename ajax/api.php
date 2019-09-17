@@ -56,6 +56,7 @@
             $consulta = new sql($con_oltp, $con_olap);
 
             echo $consulta->traerTablasBD($con_olap);
+
         break;
 
         case "'traer-campos-tablas2'":
@@ -63,9 +64,15 @@
             $consulta2 = new sql($con_oltp, $con_olap);
 
             echo $consulta2->traerCamposTabla2($con_olap, $_GET["tabla"]);
+
         break;
 
-        case "''":
+        case "'procedimientoSqlDefinitiva'":
+
+            $sql = new sql($con_oltp, $con_olap);
+
+            echo $sql->procedimientoSql($con_olap, $_GET["dat"]);
+
         break;
 
         case "''":
