@@ -17,6 +17,9 @@ var strconcat1 = '';
 
 var strconcat2 = '';
 
+var fech;
+var fech2;
+
 $(document).ready(function(){
 
     $.ajax({
@@ -81,7 +84,7 @@ $("#selec-tabla-1").change(function(){
     tablaUsar = $('select[id=selec-tabla-1]').val();
 
     $.ajax({
-        url: "ajax/api.php?accion='traer-campos-tablas'",
+        url: "ajax/api.php?accion='traer-campos-tablas-oltp'",
         data: tabla,
         dataType: "json",
         method: "GET",
@@ -380,7 +383,7 @@ $("#btn-destination-1").click(function(){
                     }
                     else
                     {
-                        camposConvertidos[i] = 'LOWER('+camposTabla[i]+')';
+                        camposConvertidos[i] = 'LOWER('+camposTabla[i]+') AS '+ camposTabla[i];
                     }
                 }
                 else
@@ -393,7 +396,7 @@ $("#btn-destination-1").click(function(){
                         }
                         else
                         {
-                            camposConvertidos[i] = 'UPPER('+camposTabla[i]+')';
+                            camposConvertidos[i] = 'UPPER('+camposTabla[i]+') AS ' + camposTabla[i];
                         }
                     }
                     else
@@ -462,7 +465,7 @@ $("#btn-destination-1").click(function(){
                     }
                     else
                     {
-                        camposConvertidos[i] = 'LOWER('+camposTabla2[i]+')';
+                        camposConvertidos[i] = 'LOWER('+camposTabla2[i]+') AS '+ camposTabla2[i];
                     }
                 }
                 else
@@ -475,7 +478,7 @@ $("#btn-destination-1").click(function(){
                         }
                         else
                         {
-                            camposConvertidos[i] = 'UPPER('+camposTabla2[i]+')';
+                            camposConvertidos[i] = 'UPPER('+camposTabla2[i]+') AS '+ camposTabla2[i];
                         }
                     }
                     else
@@ -527,7 +530,9 @@ $("#btn-destination-1").click(function(){
 
     console.log("La consulta definitiva es: " +sqlFinal);
 
-    console.log("La tabla destino es: " + tablaDestino);
+    ejecutarSql(sqlFinal, tablaDestino);
+
+    //console.log("La tabla destino es: " + tablaDestino);
 
 });
 
@@ -551,9 +556,11 @@ $("#btn-sig-etl5").click(function(){
     window.location = "index.html";
 });
 
-function ejecutarSql(consulta){
+function ejecutarSql(consulta, tabla){
 
     var sql = "sql=" + consulta;
+
+    //alert("Data: " +sql);
 
     $.ajax({
         url: "ajax/api.php?accion='ejecutarSqlDefinitiva'",
@@ -561,8 +568,57 @@ function ejecutarSql(consulta){
         dataType: "json",
         method: "GET",
         success: function(respuesta){
-            
 
+            console.log("Los datos son: ");
+
+            if(tabla == 'TBL_LIBROS')
+            {
+                var dat = '';
+
+                for(var i=0; i<respuesta.length; i++)
+                {
+                    /*fech = Date.parse(respuesta[i].FECHA_INSERT);
+                    fech2 = new Date(fech);*/
+                    dat = 'dat=EXECUTE PA_INSERT_LIB('+ respuesta[i].ID_LIBRO +','+ "'" +respuesta[i].NOMBRE_LIBRO+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+
+                    console.log(dat);
+                    /*$.ajax({
+                        url: "ajax/api.php?accion='ejecutarSqlDefinitiva'",
+                        data: sql,
+                        method: "GET",
+                    });*/
+                }
+                    //console.log(respuesta[i].ID_LIBRO +' '+ respuesta[i].NOMBRE_LIBRO +' '+ respuesta[i].FECHA_INSERT);
+            }
+            else
+            {
+                if(tabla == 'TBL_SUCURSALES')
+                {
+                    for(var i=0; i<respuesta.length; i++)
+                        console.log(respuesta[i].ID_SUCURSAL +' '+ respuesta[i].NOMBRE_SUCURSAL +' '+ respuesta[i].DIRECCION +' '+ respuesta[i].FECHA_INSERT) ;
+                }
+                else
+                {
+                    if(tabla == 'TBL_EMPLEADOS')
+                    {
+                        for(var i=0; i<respuesta.length; i++)
+                            console.log(respuesta[i].ID_EMPLEADO +' '+ respuesta[i].NOMBRE_EMPLEADO +' '+ respuesta[i].FECHA_INSERT);
+                    }
+                    else
+                    {
+                        if(tabla == 'TBL_CATEGORIAS')
+                        {
+                            for(var i=0; i<respuesta.length; i++)
+                                console.log(respuesta[i].ID_CATEGORIA +' '+ respuesta[i].DESCRIPCION +' '+ respuesta[i].FECHA_INSERT);
+                        }
+                        else
+                        {
+                            for(var i=0; i<respuesta.length; i++)
+                                console.log("Respuesta para la tabla tiempo!!!");
+                        }
+                    }
+                }
+            }
 
         },
         error: function(e){

@@ -3,7 +3,7 @@
 	class Conexion_OLTP{
 
 		private $db = "oci:dbname=XE";
-		private $usuario = "USER_LIBRERIA";
+		private $usuario = "LIBRERIA_1";
         private $password = "oracle";
         private $conexion;
 

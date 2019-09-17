@@ -25,7 +25,19 @@
 
 		}
 
-		public function traerCamposTabla($conexion, $tabla)
+		public function traerCampTab($conexion, $tabla)
+		{
+			$instruccion = "SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = '$tabla'";
+
+			$resultado = array();
+
+			$resultado = $conexion->obtenerFila2($instruccion);
+
+			return json_encode($resultado);
+
+		}
+
+		public function traerCamposTabla2($conexion, $tabla)
 		{
 			$instruccion = "SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = '$tabla'";
 

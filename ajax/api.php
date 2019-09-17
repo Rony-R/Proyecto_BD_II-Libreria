@@ -24,11 +24,11 @@
 
         break;
 
-        case "'traer-campos-tablas'":
+        case "'traer-campos-tablas-oltp'":
 
             $consulta2 = new sql($con_oltp, $con_olap);
 
-            echo $consulta2->traerCamposTabla($con_oltp, $_GET["tabla"]);
+            echo $consulta2->traerCampTab($con_oltp, $_GET["tabla"]);
 
         break;
 
@@ -62,7 +62,19 @@
 
             $consulta2 = new sql($con_oltp, $con_olap);
 
-            echo $consulta2->traerCamposTabla($con_olap, $_GET["tabla"]);
+            echo $consulta2->traerCamposTabla2($con_olap, $_GET["tabla"]);
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
+        break;
+
+        case "''":
         break;
 
         case "''":

@@ -108,6 +108,16 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="FECHA_INSERT_DW" id="D3B626E3-99D6-973C-DDBD-E9DE580A7DA4">
+<createdBy>RonyR</createdBy>
+<createdTime>2019-09-16 19:34:18 UTC</createdTime>
+<ownerDesignName>Modelo Hechos Libro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9BE6C978-54D0-24B2-A8EA-E76D1FD65566" name="TBL_HECHOS_LIBRO_PK">

@@ -41,7 +41,7 @@ $("#select-origen").change(function(){
 
             for(var i=0; i<respuesta.length; i++)
             {
-                $('select[id=selec-tabla-1]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
+                $('select[id=selec-tabla-hechos]').append('<option>'+respuesta[i].TABLE_NAME+'</option>');
             }
 
         },
@@ -72,13 +72,13 @@ $("#select-origen").change(function(){
 
 });
 
-$("#selec-tabla-1").change(function(){
+$("#selec-tabla-hechos").change(function(){
 
     $("#form-chk-1").html('');
 
-    var tabla = "tabla=" + $('select[id=selec-tabla-1]').val();
+    var tabla = "tabla=" + $('select[id=selec-tabla-hechos]').val();
 
-    tablaUsar = $('select[id=selec-tabla-1]').val();
+    tablaUsar = $('select[id=selec-tabla-hechos]').val();
 
     $.ajax({
         url: "ajax/api.php?accion='traer-campos-tablas2'",
@@ -99,13 +99,13 @@ $("#selec-tabla-1").change(function(){
         }
     });
 
-    $("#tabla-1").html("ETL "+$('select[id=selec-tabla-1]').val());
+    $("#tabla-1").html("ETL "+$('select[id=selec-tabla-hechos]').val());
 
 });
 
 $("#btn-source-1").click(function(){
 
-    tablaUsar = $('select[id=selec-tabla-1]').val();
+    tablaUsar = $('select[id=selec-tabla-hechos]').val();
 
     var datosSource = '';
     var datosSource2 = '';

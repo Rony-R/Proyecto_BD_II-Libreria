@@ -3,7 +3,7 @@
 	class Conexion_OLAP{
 
 		private $db = "oci:dbname=XE";
-		private $usuario = "USER_LIBRERIA_2";
+		private $usuario = "DW_LIBRERIA_1";
         private $password = "oracle";
         private $conexion;
 
