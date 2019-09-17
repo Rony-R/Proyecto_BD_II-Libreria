@@ -21,7 +21,7 @@ CREATE TABLE tbl_hechos_libro (
     id_categoria         INTEGER NOT NULL,
     id_sucursal          INTEGER NOT NULL,
     id_empleado          INTEGER NOT NULL,
-    cod_reg_tiempo       INTEGER NOT NULL,
+    cod_reg_tiempo       DATE NOT NULL,
     venta_total          INTEGER NOT NULL,
     num_veces_prestado   INTEGER NOT NULL,
     fecha_insert_dw      DATE NOT NULL
@@ -47,7 +47,7 @@ CREATE TABLE tbl_sucursales (
 ALTER TABLE tbl_sucursales ADD CONSTRAINT tbl_sucursales_pk PRIMARY KEY ( id_sucursal );
 
 CREATE TABLE tbl_tiempo (
-    cod_reg_tiempo    INTEGER NOT NULL,
+    cod_reg_tiempo    DATE NOT NULL,
     anio              INTEGER NOT NULL,
     mes               INTEGER NOT NULL,
     dia               INTEGER NOT NULL,

@@ -75,7 +75,12 @@
 
         break;
 
-        case "''":
+        case "'ejecutarSqlTiempo'":
+
+            $s = new sql($con_oltp, $con_olap);
+
+            echo $s->ejecutarTiempo($con_oltp, $_GET["sql"]);
+
         break;
 
         case "''":

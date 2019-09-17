@@ -523,6 +523,12 @@ $("#btn-destination-1").click(function(){
     }
     console.log(camposConvertidos2);
 
+    if(tablaDestino == 'TBL_HECHOS_LIBRO')
+    {
+        sqlFinal = 'SELECT LIB.ID_LIBRO,CAT.ID_CATEGORIA,SUC.ID_SUCURSAL,EMP.ID_EMPLEADO,SUM(FAC.VENTA_TOTAL-(DESCU.PORCENTAJE_DESCUENTO*FAC.VENTA_TOTAL)) AS VENTA_TOTAL,COUNT(PL.ID_PRESTAMO) AS NUM_VECES_PRESTADOFROM TBL_FACTURAS FACINNER JOIN TBL_DETALLE_FACTURAS DF ON FAC.ID_FACTURA = DF.ID_FACTURAINNER JOIN TBL_DESCUENTOS DESCU ON DF.ID_DESCUENTO = DESCU.ID_DESCUENTOINNER JOIN TBL_LIBROS LIB ON DF.ID_LIBRO = LIB.ID_LIBROINNER JOIN TBL_CATEGORIAS CAT ON LIB.ID_CATEGORIA = CAT.ID_CATEGORIAINNER JOIN TBL_EMPLEADOS EMP ON FAC.ID_EMPLEADO = EMP.ID_EMPLEADOINNER JOIN TBL_EMPLEADOS_X_SUCURSAL EXS ON EMP.ID_EMPLEADO = EXS.ID_EMPLEADOINNER JOIN TBL_SUCURSALES SUC ON EXS.ID_SUCURSAL = SUC.ID_SUCURSALINNER JOIN TBL_PRESTAMOS_LIBRO PL ON FAC.ID_FACTURA = PL.ID_FACTURAGROUP BY LIB.ID_LIBRO, CAT.ID_CATEGORIA, SUC.ID_SUCURSAL, EMP.ID_EMPLEADO;';
+        ejeCut(sqlFinal);
+    }
+
     sqlFinal = sqlFinal + camposConvertidos2.substring(1, camposConvertidos2.length) + ' FROM ' + tablaDestino;
 
     console.log("La consulta definitiva es: " +sqlFinal);
@@ -566,6 +572,41 @@ function ejecutarSql(consulta){
         error: function(e){
             console.log(e);
             console.log("Ocurrio un error en: ejecutarSqlDefinitiva");
+        }
+    });
+
+}
+
+
+function ejeCut(consulta){
+
+    var sql = "sql=" + consulta;
+
+    $.ajax({
+        url: "ajax/api.php?accion='ejecutarSqlDefinitiva'",
+        data: sql,
+        dataType: "json",
+        method: "GET",
+        success:function(respuesta){
+
+            var dat = '';
+            console.log("Hechos!!!");
+
+                for(var i=0; i<respuesta.length; i++)
+                {
+                    dat = 'dat=EXECUTE PA_INSERT_HECH('+ respuesta[i].ID_LIBRO +','+ respuesta[i].ID_CATEGORIA + ','+ respuesta[i].ID_SUCURSAL+',' + respuesta[i].ID_EMPLEADO+',' +respuesta[i].fecha+','+respuesta[i].VENTA_TOTAL+','+respuesta[i].P_VENT+','+respuesta[i].NUM_VECES_PRESTADO+', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'))'; 
+
+                                    $.ajax({
+                                        url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
+                                        data: dat,
+                                        method: "GET",
+                                        success: function(res){
+                                            console.log("Los EXECUTE son: ");
+                                            console.log(res);
+                                        }
+                                    });
+                }
+
         }
     });
 

@@ -532,7 +532,24 @@ $("#btn-destination-1").click(function(){
     }
     console.log(camposConvertidos2);
 
-    sqlFinal = sqlFinal + camposConvertidos2.substring(1, camposConvertidos2.length) + ' FROM ' + tablaDestino;
+    if(tablaDestino == 'TBL_TIEMPO')
+    {
+        //sqlFinal = $("#sql-txta-source-1").val();
+        sqlFinal = 'SELECT FECHA_FACTURA AS COD_REG_TIEMPO,EXTRACT(YEAR FROM FECHA_FACTURA)AS ANIO,EXTRACT(MONTH FROM FECHA_FACTURA) AS MES,EXTRACT(DAY FROM FECHA_FACTURA) AS DIA,FECHA_INSERT FROM TBL_FACTURAS';
+        ejeCut(sqlFinal);
+    }
+    else
+    {
+        if(tablaDestino == 'TBL_EMPLEADOS')
+        {
+            sqlFinal = $("#sql-txta-source-1").val();
+        }
+        else
+        {
+            sqlFinal = sqlFinal + camposConvertidos2.substring(1, camposConvertidos2.length) + ' FROM ' + tablaDestino;
+        }
+    }
+
 
     console.log("La consulta definitiva es: " +sqlFinal);
 
@@ -562,6 +579,45 @@ $("#btn-sig-etl5").click(function(){
     window.location = "index.html";
 });
 
+function ejeCut(consulta){
+
+    var con = "sql=" + consulta;
+
+    //console.log("TBL_TIMEPO DICE: " +sql);
+
+    $.ajax({
+        url: "ajax/api.php?accion='ejecutarSqlTiempo'",
+        data: con,
+        dataType: "json",
+        method: "GET",
+        success:function(respuesta){
+
+            var dat = '';
+            console.log("Hola TBL_TIEMPO");
+
+                for(var i=0; i<respuesta.length; i++)
+                {
+                    dato = 'dat=EXECUTE PA_INSERT_TIEM(TO_DATE('+"'"+respuesta[i].COD_REG_TIEMPO+"',"+"'"+'DD/MM/YY'+"'"+")"+','+ respuesta[i].ANIO + ','+ respuesta[i].MES+',' + respuesta[i].DIA +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'))'; 
+                    //dato = 'dat='+respuesta[i].FECHA_FACTURA;
+                    $.ajax({
+                        url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
+                        data: dato,
+                        method: "GET",
+                        success: function(respuesta){
+                            console.log("Los EXECUTE son: ");
+                            console.log(respuesta);
+                        }
+                    });
+                }
+
+        },
+        error: function(e){
+            console.log(e);
+        }
+    });
+
+}
+
 function ejecutarSql(consulta, tabla){
 
     var sql = "sql=" + consulta;
@@ -583,7 +639,7 @@ function ejecutarSql(consulta, tabla){
 
                 for(var i=0; i<respuesta.length; i++)
                 {
-                    dat = 'dat=EXECUTE PA_INSERT_LIB('+ respuesta[i].ID_LIBRO +','+ "'" +respuesta[i].NOMBRE_LIBRO+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+                    dat = 'dat=CALL PA_INSERT_LIB('+ respuesta[i].ID_LIBRO +','+ "'" +respuesta[i].NOMBRE_LIBRO+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
 
                     //console.log(dat);
 
@@ -605,26 +661,33 @@ function ejecutarSql(consulta, tabla){
                 {
                     /*for(var i=0; i<respuesta.length; i++)
                         console.log(respuesta[i].ID_SUCURSAL +' '+ respuesta[i].NOMBRE_SUCURSAL +' '+ respuesta[i].DIRECCION +' '+ respuesta[i].FECHA_INSERT) ;*/
-                    dat = 'dat=EXECUTE PA_INSERT_SUCUR('+respuesta[i].ID_SUCURSAL+','+ respuesta[i].NOMBRE_SUCURSAL +','+ "'" +respuesta[i].DIRECCION+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+                    for(var i=0; i<respuesta.length; i++)
+                    {
+                        dat = 'dat=EXECUTE PA_INSERT_SUCUR('+respuesta[i].ID_SUCURSAL+','+"'"+respuesta[i].NOMBRE_SUCURSAL+"'"+','+ "'" +respuesta[i].DIRECCION+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
 
-                    $.ajax({
-                        url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
-                        data: dat,
-                        method: "GET",
-                        success: function(respuesta){
-                            console.log("Los EXECUTE son: ");
-                            console.log(respuesta);
-                        }
-                    });
+                        $.ajax({
+                            url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
+                            data: dat,
+                            method: "GET",
+                            success: function(respuesta){
+                                console.log("Los EXECUTE son: ");
+                                console.log(respuesta);
+                            }
+                        });
+                    }
 
                 }
                 else
                 {
                     if(tabla == 'TBL_EMPLEADOS')
                     {
+                    
                         /*for(var i=0; i<respuesta.length; i++)
                             console.log(respuesta[i].ID_EMPLEADO +' '+ respuesta[i].NOMBRE_EMPLEADO +' '+ respuesta[i].FECHA_INSERT);*/
-                        dat = 'dat=EXECUTE PA_INSERT_EMPLEADOS('+ respuesta[i].ID_EMPLEADO +','+ "'" +respuesta[i].NOMBRE_EMPLEADO+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+                        for(var i=0; i<respuesta.length; i++)
+                        {
+                            //var temp = 'TO_CHAR('+"'"+respuesta[i].FECHA_INSERT+"'"+','+"'DD/MM/YY'"+')';
+                            dat = 'dat=EXECUTE PA_INSERT_EMPLEADOS('+ respuesta[i].ID_EMPLEADO +','+ "'" +respuesta[i].NOMBRE_EMPLEADO+ "'" +', TO_DATE('+"'"+respuesta[i].FECHA_INSERT+"'"+','+"'"+'DD-MON-YY'+"'"+'));'; 
 
                         $.ajax({
                             url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
@@ -636,6 +699,7 @@ function ejecutarSql(consulta, tabla){
                             }
                         });
 
+                        }
                     }
                     else
                     {
@@ -643,7 +707,9 @@ function ejecutarSql(consulta, tabla){
                         {
                             /*for(var i=0; i<respuesta.length; i++)
                                 console.log(respuesta[i].ID_CATEGORIA +' '+ respuesta[i].DESCRIPCION +' '+ respuesta[i].FECHA_INSERT);*/
-                            dat = 'dat=EXECUTE PA_INSERT_CAT('+ respuesta[i].ID_CATEGORIA +','+ "'" +respuesta[i].DESCRIPCION+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+                            for(var i=0; i<respuesta.length; i++)
+                            {
+                                dat = 'dat=EXECUTE PA_INSERT_CAT('+ respuesta[i].ID_CATEGORIA +','+ "'" +respuesta[i].DESCRIPCION+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
 
                             $.ajax({
                                 url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
@@ -654,24 +720,33 @@ function ejecutarSql(consulta, tabla){
                                     console.log(respuesta);
                                 }
                             });
+                            }
 
                         }
                         else
                         {
-                            for(var i=0; i<respuesta.length; i++)
-                                console.log("Respuesta para la tabla tiempo!!!");
-                            dat = 'dat=EXECUTE PA_INSERT_CAT('+ respuesta[i].ID_CATEGORIA +','+ "'" +respuesta[i].DESCRIPCION+ "'" +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'));'; 
+                            /*for(var i=0; i<respuesta.length; i++)
+                                console.log("Respuesta para la tabla tiempo!!!");*/
+                           
+                                //console.log("TABLA TBL_TIEMPO");
 
-                            $.ajax({
-                                url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
-                                data: dat,
-                                method: "GET",
-                                success: function(respuesta){
-                                    console.log("Los EXECUTE son: ");
-                                    console.log(respuesta);
-                                }
-                            });
+                                /*for(var i=0; i<respuesta.length; i++)
+                                {
+                                    dat = 'dat=EXECUTE PA_INSERT_TIEM('+ respuesta[i].COD_REG_TIEMPO +','+ respuesta[i].ANIO + ','+ respuesta[i].MES+',' + respuesta[i].DIA +', TO_DATE('+ "'" +respuesta[i].FECHA_INSERT+ "'" +','+"'"+'DD-MM-YY'+"'"+'))'; 
 
+                                    $.ajax({
+                                        url: "ajax/api.php?accion='procedimientoSqlDefinitiva'",
+                                        data: dat,
+                                        method: "GET",
+                                        success: function(respuesta){
+                                            console.log("Los EXECUTE son: ");
+                                            console.log(respuesta);
+                                        }
+                                    });
+
+                                    }*/
+                   
+                            
                         }
                     }
                 }

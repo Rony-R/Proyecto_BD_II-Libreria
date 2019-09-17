@@ -277,38 +277,38 @@ INSERT INTO tbl_sucursales VALUES(30,5,30,'Sucursal 30','Direccion sucursal 30',
 
 /**********************************************************************************/
 
-INSERT INTO tbl_empleados VALUES(1,1, NULL,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(2,2, NULL,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(3,3, NULL,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(4,4, NULL,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(5,5, NULL,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(6,6, 1,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(7,7, 1,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(8,8, 2,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(9,9, 3,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(10,10, 2,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(11,11, 2,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(12,12, 4,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(13,13, 4,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(14,14, 5,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(15,15, 1,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(16,16, 4,to_date('20/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(17,17, 3,to_date('20/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(18,18, 4,to_date('20/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(19,19, 7,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(20,20, 7,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(21,21, 7,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(22,22, 7,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(23,23, 7,to_date('1/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(24,24, 1,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(25,25, 1,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(26,26, 2,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(27,27, 3,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(28,28, 2,to_date('5/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(29,29, 2,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(30,30, 4,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(31,31, 4,to_date('10/1/19', 'dd/mm/yy'));
-INSERT INTO tbl_empleados VALUES(32,32, 4,to_date('10/1/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(1,1, NULL,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(2,2, NULL,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(3,3, NULL,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(4,4, NULL,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(5,5, NULL,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(6,6, 1,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(7,7, 1,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(8,8, 2,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(9,9, 3,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(10,10, 2,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(11,11, 2,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(12,12, 4,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(13,13, 4,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(14,14, 5,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(15,15, 1,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(16,16, 4,to_date('20/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(17,17, 3,to_date('20/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(18,18, 4,to_date('20/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(19,19, 7,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(20,20, 7,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(21,21, 7,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(22,22, 7,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(23,23, 7,to_date('1/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(24,24, 1,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(25,25, 1,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(26,26, 2,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(27,27, 3,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(28,28, 2,to_date('5/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(29,29, 2,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(30,30, 4,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(31,31, 4,to_date('10/2/19', 'dd/mm/yy'));
+INSERT INTO tbl_empleados VALUES(32,32, 4,to_date('10/2/19', 'dd/mm/yy'));
 
 /**********************************************************************************/
 
@@ -491,4 +491,61 @@ INSERT INTO tbl_tipo_pago VALUES (1,'Efectivo');
 INSERT INTO tbl_tipo_pago VALUES (2,'Tarjeta');
 
 /**********************************************************************************/
+
+INSERT INTO TBL_FACTURAS VALUES (1,2,1,1,TO_DATE('17/09/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('17/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (2,2,1,1,TO_DATE('19/09/2019','DD/MM/YYYY'),400,15,415,500,85,TO_DATE('19/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (3,2,1,1,TO_DATE('01/10/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('01/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (4,1,2,1,TO_DATE('15/10/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('15/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (5,1,2,1,TO_DATE('10/11/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('10/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (6,1,2,1,TO_DATE('20/11/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('20/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (7,2,1,1,TO_DATE('01/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('01/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (8,2,1,1,TO_DATE('01/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('01/02/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (9,2,1,1,TO_DATE('02/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('02/03/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (10,1,1,1,TO_DATE('03/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('03/03/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (11,2,1,1,TO_DATE('04/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('04/03/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (12,2,1,1,TO_DATE('04/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('04/03/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (13,2,1,1,TO_DATE('04/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('04/03/2019','DD/MM/YYYY'));
+INSERT INTO TBL_FACTURAS VALUES (14,2,1,1,TO_DATE('04/02/2019','DD/MM/YYYY'),200,15,215,300,85,TO_DATE('04/03/2019','DD/MM/YYYY'));
+
+
+/**********************************************************************************/
+
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (1,2,300,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698983664901176');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (2,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698982704901154');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (3,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698983664901218');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (4,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698982264901354');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (5,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698987304901504');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (6,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698988734901460');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (7,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698985164901556');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (8,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698988744901187');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (9,2,200,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698982084901782');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (10,2,250,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'4698987324901484');
+INSERT INTO TBL_PAGOS (ID_PAGO,ID_TIPO_PAGO,MONTO_PAGAR,FECHA_PAGO,NUMERO_TARJETA) VALUES (11,2,250,TO_DATE('02/03/2019 22:05:01','DD/MM/YYYY hh24:mi:ss'),'5301653280701104');
+
+/**********************************************************************************/
+
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (1,1,TO_DATE('17/09/2019','DD/MM/YYYY'),TO_DATE('17/10/2019','DD/MM/YYYY'),TO_DATE('17/09/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (2,2,TO_DATE('19/09/2019','DD/MM/YYYY'),TO_DATE('19/10/2019','DD/MM/YYYY'),TO_DATE('19/09/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (3,3,TO_DATE('01/10/2019','DD/MM/YYYY'),TO_DATE('01/11/2019','DD/MM/YYYY'),TO_DATE('01/10/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (4,4,TO_DATE('01/12/2019','DD/MM/YYYY'),TO_DATE('01/01/2020','DD/MM/YYYY'),TO_DATE('01/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (5,5,TO_DATE('01/12/2019','DD/MM/YYYY'),TO_DATE('01/01/2020','DD/MM/YYYY'),TO_DATE('01/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (6,6,TO_DATE('02/12/2019','DD/MM/YYYY'),TO_DATE('02/01/2020','DD/MM/YYYY'),TO_DATE('02/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (7,7,TO_DATE('04/12/2019','DD/MM/YYYY'),TO_DATE('04/01/2020','DD/MM/YYYY'),TO_DATE('04/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (8,8,TO_DATE('04/12/2019','DD/MM/YYYY'),TO_DATE('04/01/2020','DD/MM/YYYY'),TO_DATE('04/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (9,9,TO_DATE('04/12/2019','DD/MM/YYYY'),TO_DATE('04/01/2020','DD/MM/YYYY'),TO_DATE('04/12/2019','DD/MM/YYYY'));
+INSERT INTO TBL_PRESTAMOS_LIBRO VALUES (10,10,TO_DATE('04/12/2019','DD/MM/YYYY'),TO_DATE('04/01/2020','DD/MM/YYYY'),TO_DATE('04/12/2019','DD/MM/YYYY'));
+
+/**********************************************************************************/
+
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (1,1,1,1,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (2,1,1,2,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (3,1,2,3,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (4,1,3,4,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (5,1,4,5,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (6,1,4,6,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (7,1,5,1,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (8,1,6,2,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (9,1,7,6,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (10,5,8,1,500);
+INSERT INTO TBL_DETALLE_FACTURAS VALUES (11,5,9,2,500);
 

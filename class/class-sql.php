@@ -72,9 +72,23 @@
 
 		public function procedimientoSql($conexion, $exec)
 		{
-			$instruccion = $exec;
+			$result = $conexion->ejecutarConsulta($exec);
 
-			return $instruccion;
+			if($result)
+				return 1;
+			else
+				return 0;
+			//return $exec;
+		}
+
+		public function ejecutarTiempo($con, $sql)
+		{
+			$resultado = array();
+
+			$resultado = $con->obtenerFila2($sql);
+
+			return json_encode($resultado);
+
 		}
 
 	}
